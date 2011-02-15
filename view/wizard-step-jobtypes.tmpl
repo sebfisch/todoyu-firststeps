@@ -1,0 +1,12 @@
+{$items = max(sizeof($data),$default)}
+<ul class="jobtypes autoextend">
+	{for i 0 $items}
+		<li>
+			<input type="text" name="data[jobtype][]" value="{$data[$i]}"/>
+			<span class="remove"></span>
+		</li>
+	{/for}
+	<li><input type="text" name="data[jobtype][]"/><span class="remove"></span></li>
+	<li><input type="text" name="data[jobtype][]"/><span class="remove"></span></li>
+	<li><input type="text" name="data[jobtype][]"/><span class="remove"></span></li>
+</ul>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="ext.title">Firststeps</label>
+	<label index="wizard.start.label">Start first step wizard</label>
+	<label index="wizard.jobtypes.label">Job Types</label>
+	<label index="wizard.projectroles.label">Project Roles</label>
+
+</labels>
