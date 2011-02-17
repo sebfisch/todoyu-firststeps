@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<attributes>
+		<attribute name="name">data</attribute>
+	</attributes>
+	<fieldsets>
+		<fieldset name="main">
+			<legend>Main project data</legend>
+			<elements>
+
+				<field type="text" name="title">
+					<label>core.title</label>
+					<validate>
+						<isNotEmpty msg="LLL:project.form.validation.title"/>
+					</validate>
+					<required/>
+				</field>
+
+				<field type="RTE" name="description">
+					<label>core.description</label>
+					<tinymce>
+						<theme>simple</theme>
+						<width>100%</width>
+						<height>250px</height>
+					</tinymce>
+					<required/>
+				</field>
+
+				<field type="textAC" name="id_company">
+					<label>project.attr.company</label>
+					<config>
+						<acName>company</acName>
+						<acLabel>TodoyuCompanyManager::getLabel</acLabel>
+						<options>
+							<onComplete>Todoyu.Ext.project.Project.Edit.onCompanyAutocomplete</onComplete>
+						</options>
+					</config>
+					<required label="LLL:project.form.validation.company" />
+				</field>
+
+				<field type="date" name="date_start">
+					<label>project.attr.date_start</label>
+					<validate>
+						<dateNotAfter>
+							<field>date_end</field>
+						</dateNotAfter>
+					</validate>
+					<required />
+				</field>
+
+				<field type="date" name="date_end">
+					<label>project.attr.date_end</label>
+					<validate>
+						<dateAfter>
+							<field>date_start</field>
+							<allowEmpty />
+						</dateAfter>
+					</validate>
+				</field>
+
+			</elements>
+		 </fieldset>
+
+		<fieldset name="persons">
+			<legend>Main project data</legend>
+			<elements>
+
+				<field type="select" name="id_person">
+					<label>contact.company.attr.person</label>
+					<source type="function">
+						<function>TodoyuFirstStepsViewHelper::getPersonOptions</function>
+					</source>
+				</field>
+
+				<field type="select" name="id_role">
+					<label>project.attr.persons.role</label>
+					<source type="function">
+						<function>TodoyuProjectViewHelper::getProjectroleOptions</function>
+					</source>
+				</field>
+
+				<field type="saveButton" name="addperson">
+					<onclick>Todoyu.Ext.firststeps.Wizard.addPerson()</onclick>
+					<text>Add person to project</text>
+				</field>
+
+
+			</elements>
+		 </fieldset>
+
+	</fieldsets>
+</form>

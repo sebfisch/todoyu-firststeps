@@ -24,24 +24,26 @@
  * @package		Todoyu
  * @subpackage	[Subpackage]
  */
-class TodoyuFirstStepsWizardStepStart extends TodoyuFirstStepsWizardStep {
+class TodoyuFirstStepsViewHelper {
 
-	public function save(array $data) {
-		return true;
+	public static function getPersonOptions(TodoyuFormElement $field) {
+		$loginPersons	= TodoyuPersonManager::getAllLoginPersons();
+		$options		= array();
+
+		$options[] = array(
+			'value'	=> 0,
+			'label'	=> ''
+		);
+
+		foreach($loginPersons as $loginPerson) {
+			$options[] = array(
+				'value'	=> $loginPerson['id'],
+				'label'	=> $loginPerson['lastname'] . ' ' . $loginPerson['firstname']
+			);
+		}
+
+		return $options;
 	}
-
-
-	public function renderContent() {
-		$tmpl	= 'ext/firststeps/view/wizard-step-start.tmpl';
-
-		return 'welcome: ' . date('r');
-	}
-
-
-	public function renderHelp() {
-		return 'Das ist die Start hilfe';
-	}
-
 }
 
 ?>

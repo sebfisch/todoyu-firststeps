@@ -24,24 +24,18 @@
  * @package		Todoyu
  * @subpackage	[Subpackage]
  */
-class TodoyuFirstStepsWizardStepStart extends TodoyuFirstStepsWizardStep {
+class TodoyuFirstStepsRenderer {
 
-	public function save(array $data) {
-		return true;
+	public static function renderItemList(array $items, $fieldName, $listClass = '') {
+		$tmpl	= 'ext/firststeps/view/itemlist.tmpl';
+		$items	= array(
+			'items'		=> $items,
+			'fieldName'	=> $fieldName,
+			'listClass'	=> $listClass
+		);
+
+		return render($tmpl, $items);
 	}
-
-
-	public function renderContent() {
-		$tmpl	= 'ext/firststeps/view/wizard-step-start.tmpl';
-
-		return 'welcome: ' . date('r');
-	}
-
-
-	public function renderHelp() {
-		return 'Das ist die Start hilfe';
-	}
-
 }
 
 ?>

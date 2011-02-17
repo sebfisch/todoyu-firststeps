@@ -34,10 +34,6 @@ Todoyu::$CONFIG['EXT']['firststeps']['assets'] = array(
 		array(
 			'file'		=> 'ext/firststeps/assets/js/Wizard.js',
 			'position'	=> 101
-		),
-		array(
-			'file'		=> 'ext/firststeps/assets/js/AutoExtendingList.js',
-			'position'	=> 101
 		)
 	),
 	'css' => array(

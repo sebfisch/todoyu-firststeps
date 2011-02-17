@@ -24,22 +24,30 @@
  * @package		Todoyu
  * @subpackage	[Subpackage]
  */
-class TodoyuFirstStepsWizardStepStart extends TodoyuFirstStepsWizardStep {
+abstract class TodoyuFirstStepsWizardStep extends TodoyuWizardStep {
 
-	public function save(array $data) {
-		return true;
-	}
+	protected $table;
 
+	protected $formXml;
+	/**
+	 * @var	TodoyuForm	$form
+	 */
+	protected $form;
 
-	public function renderContent() {
-		$tmpl	= 'ext/firststeps/view/wizard-step-start.tmpl';
+	/**
+	 * @param	Array		$data
+	 * @return	TodoyuForm
+	 */
+	protected function getForm(array $data = null) {
+		if( is_null($this->form) ) {
+			$this->form	= TodoyuFormManager::getForm($this->formXml);
+		}
 
-		return 'welcome: ' . date('r');
-	}
+		if( is_array($data) ) {
+			$this->form->setFormData($data);
+		}
 
-
-	public function renderHelp() {
-		return 'Das ist die Start hilfe';
+		return $this->form;
 	}
 
 }

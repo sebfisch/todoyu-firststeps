@@ -24,22 +24,45 @@
  * @package		Todoyu
  * @subpackage	[Subpackage]
  */
-class TodoyuFirstStepsWizardStepStart extends TodoyuFirstStepsWizardStep {
+class TodoyuFirstStepsWizardStepActivities extends TodoyuFirstStepsWizardStep {
+
+	protected function init() {
+		$this->table = 'ext_project_worktype';
+	}
+
 
 	public function save(array $data) {
+		$activities	= TodoyuArray::assure($data['activity']);
+		$activities	= TodoyuArray::trim($activities, true);
+
+		$this->saveActivities($activities);
+
+		$this->data	= $activities;
+
 		return true;
 	}
 
 
 	public function renderContent() {
-		$tmpl	= 'ext/firststeps/view/wizard-step-start.tmpl';
+		if( $this->data === null ) {
+			$this->data = $this->getActivities();
+		}
 
-		return 'welcome: ' . date('r');
+		return TodoyuFirstStepsRenderer::renderItemList($this->data, 'activity', 'activities');
 	}
 
 
-	public function renderHelp() {
-		return 'Das ist die Start hilfe';
+	private function getActivities() {
+		$activities	= TodoyuWorktypeManager::getAllWorktypes();
+
+		return TodoyuArray::getColumn($activities, 'title');
+	}
+
+
+	private function saveActivities(array $submittedActivities) {
+		$dbActivities	= $this->getActivities();
+
+		TodoyuFirstStepsManager::saveLabelRecords($submittedActivities, $dbActivities, $this->table);
 	}
 
 }

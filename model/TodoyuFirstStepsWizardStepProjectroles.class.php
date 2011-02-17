@@ -24,22 +24,46 @@
  * @package		Todoyu
  * @subpackage	[Subpackage]
  */
-class TodoyuFirstStepsWizardStepProjectroles extends TodoyuWizardStep {
+class TodoyuFirstStepsWizardStepProjectroles extends TodoyuFirstStepsWizardStep {
 
 
-
-	public function init() {
-
+	protected function init() {
+		$this->table = 'ext_project_role';
 	}
 
 
 	public function save(array $data) {
+		$projectRoles	= TodoyuArray::assure($data['projectrole']);
+		$projectRoles	= TodoyuArray::trim($projectRoles, true);
+
+		$this->saveProjectRoles($projectRoles);
+
+		$this->data	= $projectRoles;
+
 		return true;
 	}
 
 
-	public function render() {
-		return 'TodoyuFirstStepsWizardStepProjectroles content: ' . date('r');
+	public function renderContent() {
+		if( $this->data === null ) {
+			$this->data = $this->getProjectRoles();
+		}
+
+		return TodoyuFirstStepsRenderer::renderItemList($this->data, 'projectrole', 'projectroles');
+	}
+
+
+	private function getProjectRoles() {
+		$projectRoles	= TodoyuProjectroleManager::getProjectroles(true);
+
+		return TodoyuArray::getColumn($projectRoles, 'title');
+	}
+
+
+	private function saveProjectRoles(array $submittedProjectRoles) {
+		$dbProjectRoles	= $this->getProjectRoles();
+
+		TodoyuFirstStepsManager::saveLabelRecords($submittedProjectRoles, $dbProjectRoles, $this->table);
 	}
 
 }

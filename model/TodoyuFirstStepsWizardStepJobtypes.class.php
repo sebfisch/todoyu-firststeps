@@ -22,47 +22,70 @@
  * [Enter Class Description]
  *
  * @package		Todoyu
- * @subpackage	[Subpackage]
+ * @subpackage	Firststeps
  */
-class TodoyuFirstStepsWizardStepJobtypes extends TodoyuWizardStep {
+class TodoyuFirstStepsWizardStepJobtypes extends TodoyuFirstStepsWizardStep {
 
-	protected $default = 5;
-
-
-
-	public function init() {
-
+	protected function init() {
+		$this->table = 'ext_contact_jobtype';
 	}
 
-
+	/**
+	 * Save step data
+	 *
+	 * @param	Array		$data
+	 * @return	Boolean
+	 */
 	public function save(array $data) {
 		$jobTypes	= TodoyuArray::assure($data['jobtype']);
 		$jobTypes	= TodoyuArray::trim($jobTypes, true);
 
+		$this->saveJobTypes($jobTypes);
+
 		$this->data	= $jobTypes;
 
-		TodoyuDebug::printInFireBug($jobTypes, '$jobTypes');
-
-
-		return false;
+		return true;
 	}
 
 
-	public function render() {
-		$tmpl	= 'ext/firststeps/view/wizard-step-jobtypes.tmpl';
-		$data	= array(
-			'data'		=> $this->data,
-			'default'	=> $this->default
-		);
 
-		TodoyuDebug::printInFireBug($data, 'data');
+	/**
+	 * Render step content
+	 *
+	 * @return	String
+	 */
+	public function renderContent() {
+		if( $this->data === null ) {
+			$this->data = $this->getJobtypes();
+		}
 
-		return render($tmpl, $data);
+		return TodoyuFirstStepsRenderer::renderItemList($this->data, 'jobtype', 'jobtypes');
 	}
 
 
-	//protected function
 
+	/**
+	 * Render step help
+	 * @return string
+	 */
+	public function renderHelp() {
+		return 'This is the help';
+	}
+
+
+	private function getJobtypes() {
+		$jobTypes	= TodoyuJobTypeManager::getAllJobTypes();
+		$labels		= TodoyuArray::getColumn($jobTypes, 'title');
+
+		return $labels;
+	}
+
+
+	private function saveJobTypes(array $submittedJobTypes) {
+		$dbJobTypes	= $this->getJobtypes();
+
+		TodoyuFirstStepsManager::saveLabelRecords($submittedJobTypes, $dbJobTypes, $this->table);
+	}
 }
 
 ?>

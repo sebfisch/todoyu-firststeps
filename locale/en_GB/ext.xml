@@ -4,5 +4,11 @@
 	<label index="wizard.start.label">Start first step wizard</label>
 	<label index="wizard.jobtypes.label">Job Types</label>
 	<label index="wizard.projectroles.label">Project Roles</label>
-
+	<label index="wizard.activities.label">Activities</label>
+	<label index="wizard.userroles.label">User Roles</label>
+	<label index="wizard.company.label">Your Company</label>
+	<label index="wizard.employees.label">Employees</label>
+	<label index="wizard.customers.label">Customers</label>
+	<label index="wizard.project.label">First Project</label>
+	<label index="wizard.finish.label">Finish Wizard</label>
 </labels>

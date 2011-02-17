@@ -22,24 +22,50 @@
  * [Enter Class Description]
  *
  * @package		Todoyu
- * @subpackage	[Subpackage]
+ * @subpackage	Firststeps
  */
-class TodoyuFirstStepsWizardStepStart extends TodoyuFirstStepsWizardStep {
+class TodoyuFirstStepsWizardStepUserroles extends TodoyuFirstStepsWizardStep {
+
+	protected function init() {
+		$this->table = 'system_role';
+	}
+
 
 	public function save(array $data) {
+		$roles	= TodoyuArray::assure($data['userrole']);
+		$roles	= TodoyuArray::trim($roles, true);
+
+		$this->saveRoles($roles);
+
+		$this->data	= $roles;
+
 		return true;
 	}
 
 
 	public function renderContent() {
-		$tmpl	= 'ext/firststeps/view/wizard-step-start.tmpl';
+		if( $this->data === null ) {
+			$this->data = $this->getRoles();
+		}
 
-		return 'welcome: ' . date('r');
+		return TodoyuFirstStepsRenderer::renderItemList($this->data, 'userrole', 'userroles');
 	}
 
 
-	public function renderHelp() {
-		return 'Das ist die Start hilfe';
+	private function getRoles() {
+		$roles	= TodoyuRoleManager::getAllRoles();
+
+		return TodoyuArray::getColumn($roles, 'title');
+	}
+
+
+	private function saveRoles(array $submittedRoles) {
+		$dbRoles	= $this->getRoles();
+		$extraFields= array(
+			'is_active'	=> 1
+		);
+
+		TodoyuFirstStepsManager::saveLabelRecords($submittedRoles, $dbRoles, $this->table, 'title', $extraFields);
 	}
 
 }

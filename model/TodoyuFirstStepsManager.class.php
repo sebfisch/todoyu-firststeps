@@ -24,22 +24,28 @@
  * @package		Todoyu
  * @subpackage	[Subpackage]
  */
-class TodoyuFirstStepsWizardStepStart extends TodoyuFirstStepsWizardStep {
+class TodoyuFirstStepsManager {
 
-	public function save(array $data) {
-		return true;
-	}
+	public static function saveLabelRecords(array $newRecords, array $dbRecords, $table, $field = 'title', array $extraFields = array()) {
+		$deleteRecords	= TodoyuArray::diffLeft($dbRecords, $newRecords);
+		$addRecords		= TodoyuArray::diffLeft($newRecords, $dbRecords);
 
+			// Delete removed records
+		if( sizeof($deleteRecords) > 0 ) {
+			$titleList	= TodoyuArray::implodeQuoted($deleteRecords);
+			$where		= $field . ' IN(' . $titleList . ')';
 
-	public function renderContent() {
-		$tmpl	= 'ext/firststeps/view/wizard-step-start.tmpl';
+			Todoyu::db()->setDeleted($table, $where);
+		}
 
-		return 'welcome: ' . date('r');
-	}
-
-
-	public function renderHelp() {
-		return 'Das ist die Start hilfe';
+			// Add missing records
+		foreach($addRecords as $record) {
+			$data	= array(
+				$field	=> $record
+			);
+			$data	= array_merge($data, $extraFields);
+			TodoyuRecordManager::addRecord($table, $data);
+		}
 	}
 
 }

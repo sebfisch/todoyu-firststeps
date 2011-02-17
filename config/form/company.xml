@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<attributes>
+		<attribute name="name">data</attribute>
+	</attributes>
+	<fieldsets>
+		<fieldset name="main">
+			<legend>Main company data</legend>
+			<elements>
+
+				<field type="text" name="title">
+					<label>contact.company.attr.title</label>
+					<required />
+				</field>
+
+				<field type="text" name="street">
+					<label>contact.address.attr.street</label>
+					<required />
+				</field>
+
+				<field type="text" name="zip">
+					<label>contact.address.attr.zip</label>
+					<required />
+				</field>
+
+				<field type="text" name="city">
+					<label>contact.address.attr.city</label>
+					<required />
+				</field>
+
+			</elements>
+		</fieldset>
+
+	</fieldsets>
+</form>

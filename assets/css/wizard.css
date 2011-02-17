@@ -17,3 +17,25 @@
 	margin-left:5px;
 	cursor:pointer;
 }
+
+
+.wizardFirststeps ul.list {
+	text-align:left;
+}
+
+.wizardFirststeps ul.list li {
+	padding:5px;
+	margin-bottom:2px;
+	border:1px dashed #CCC;
+	background-color:#FFF;
+}
+
+.wizardFirststeps ul.list li .remove {
+	display:inline-block;
+	float:right;
+	clear:none;
+	width:16px;
+	height:16px;
+	background:url(../../../../core/assets/img/icons.png) no-repeat 0 -358px;
+	cursor:pointer;
+}
