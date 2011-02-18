@@ -18,6 +18,9 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
+/**
+ * Steps for the first steps wizard
+ */
 Todoyu::$CONFIG['EXT']['firststeps']['wizardsteps'] = array(
 	array(
 		'step'		=> 'start',

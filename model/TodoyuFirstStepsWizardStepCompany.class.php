@@ -29,11 +29,6 @@ class TodoyuFirstStepsWizardStepCompany extends TodoyuFirstStepsWizardStep {
 	protected function init() {
 		$this->table	= 'ext_contact_company';
 		$this->formXml	= 'ext/firststeps/config/form/company.xml';
-
-		TodoyuDebug::printInFireBug('sub init');
-
-		TodoyuDebug::printInFireBug($this->formXml, 'form');
-
 	}
 
 

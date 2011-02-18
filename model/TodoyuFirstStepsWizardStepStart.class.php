@@ -22,19 +22,32 @@
  * [Enter Class Description]
  *
  * @package		Todoyu
- * @subpackage	[Subpackage]
+ * @subpackage	Firststeps
  */
 class TodoyuFirstStepsWizardStepStart extends TodoyuFirstStepsWizardStep {
 
+	/**
+	 * Nothing so save, always go to the next step
+	 *
+	 * @param	Array		$data
+	 * @return	Boolean
+	 */
 	public function save(array $data) {
 		return true;
 	}
 
 
+
+	/**
+	 * Render start screen
+	 *
+	 * @return	String
+	 */
 	public function renderContent() {
 		$tmpl	= 'ext/firststeps/view/wizard-step-start.tmpl';
+		$data	= array();
 
-		return 'welcome: ' . date('r');
+		return render($tmpl, $data);
 	}
 
 

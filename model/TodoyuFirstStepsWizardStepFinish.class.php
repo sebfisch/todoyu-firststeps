@@ -22,7 +22,7 @@
  * [Enter Class Description]
  *
  * @package		Todoyu
- * @subpackage	[Subpackage]
+ * @subpackage	Firststeps
  */
 class TodoyuFirstStepsWizardStepFinish extends TodoyuFirstStepsWizardStep {
 
@@ -33,13 +33,14 @@ class TodoyuFirstStepsWizardStepFinish extends TodoyuFirstStepsWizardStep {
 
 	public function renderContent() {
 		$tmpl	= 'ext/firststeps/view/wizard-step-finish.tmpl';
+		$data	= array();
 
-		return 'welcome: ' . date('r');
+		return render($tmpl, $data);
 	}
 
 
 	public function renderHelp() {
-		return 'Das ist die Start hilfe';
+		return 'Das ist die Finish hilfe';
 	}
 
 }

@@ -58,9 +58,6 @@
 							<allowEmpty />
 						</unique>
 					</validate>
-					<required>
-						<noCheck />
-					</required>
 				</field>
 
 				<field type="text" name="password">
@@ -71,9 +68,6 @@
 							<allowEmpty />
 						</goodPassword>
 					</validate>
-					<required>
-						<noCheck />
-					</required>
 					<textAfterField>LLL:contact.person.attr.password.hasPassword</textAfterField>
 				</field>
 
@@ -87,9 +81,6 @@
 							<fields>username,active</fields>
 						</requiredIfNotEmpty>
 					</validate>
-					<required>
-						<noCheck />
-					</required>
 				</field>
 
 			</elements>
