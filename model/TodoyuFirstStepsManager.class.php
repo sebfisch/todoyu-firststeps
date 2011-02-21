@@ -19,27 +19,36 @@
 *****************************************************************************/
 
 /**
- * [Enter Class Description]
+ * Firststeps helper functions
  *
  * @package		Todoyu
- * @subpackage	[Subpackage]
+ * @subpackage	Firststeps
  */
 class TodoyuFirstStepsManager {
 
+	/**
+	 * Save records which are identified only by a (title) field
+	 *
+	 * @param	Array		$newRecords		List of records which should be active after update
+	 * @param	Array		$dbRecords		List of records which are currently active in the DB
+	 * @param	String		$table
+	 * @param	String		$field			Field name which contains the 'title'
+	 * @param	Array		$extraFields	Extra field values to add to the record
+	 */
 	public static function saveLabelRecords(array $newRecords, array $dbRecords, $table, $field = 'title', array $extraFields = array()) {
-		$deleteRecords	= TodoyuArray::diffLeft($dbRecords, $newRecords);
-		$addRecords		= TodoyuArray::diffLeft($newRecords, $dbRecords);
+		$labelsToDelete	= TodoyuArray::diffLeft($dbRecords, $newRecords);
+		$labelToAdd		= TodoyuArray::diffLeft($newRecords, $dbRecords);
 
 			// Delete removed records
-		if( sizeof($deleteRecords) > 0 ) {
-			$titleList	= TodoyuArray::implodeQuoted($deleteRecords);
+		if( sizeof($labelsToDelete) > 0 ) {
+			$titleList	= TodoyuArray::implodeQuoted($labelsToDelete);
 			$where		= $field . ' IN(' . $titleList . ')';
 
 			Todoyu::db()->setDeleted($table, $where);
 		}
 
 			// Add missing records
-		foreach($addRecords as $record) {
+		foreach($labelToAdd as $record) {
 			$data	= array(
 				$field	=> $record
 			);

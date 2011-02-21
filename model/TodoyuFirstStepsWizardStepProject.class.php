@@ -19,7 +19,7 @@
 *****************************************************************************/
 
 /**
- * [Enter Class Description]
+ * Wizard step: project
  *
  * @package		Todoyu
  * @subpackage	Firststeps
@@ -37,9 +37,10 @@ class TodoyuFirstStepsWizardStepProject extends TodoyuFirstStepsWizardStep {
 
 
 	/**
+	 * Save/update project
 	 *
-	 * @param array $data
-	 * @return bool
+	 * @param	Array		$data
+	 * @return	Boolean
 	 */
 	public function save(array $data) {
 		$form	= $this->getForm($data);
@@ -57,7 +58,12 @@ class TodoyuFirstStepsWizardStepProject extends TodoyuFirstStepsWizardStep {
 	}
 
 
-	public function renderContent() {
+	/**
+	 * Render content
+	 *
+	 * @return		String
+	 */
+	public function getContent() {
 		if( $this->data === null ) {
 			$this->data = $this->getProjectData();
 		}
@@ -70,16 +76,18 @@ class TodoyuFirstStepsWizardStepProject extends TodoyuFirstStepsWizardStep {
 			'form'	=> $this->getForm($this->data)->renderContent()
 		);
 
-		TodoyuDebug::printInFireBug($this->data, 'data');
-
-
 		return render($tmpl, $data);
 	}
 
 
 
+	/**
+	 * Get project members as list items
+	 *
+	 * @return	Array
+	 */
 	private function getListItems() {
-		$persons	= $this->getProjectUsers();
+		$persons	= TodoyuProjectManager::getProjectPersons(1);
 		$items		= array();
 
 		foreach($persons as $person) {
@@ -93,14 +101,15 @@ class TodoyuFirstStepsWizardStepProject extends TodoyuFirstStepsWizardStep {
 	}
 
 
-	private function getProjectUsers() {
-		return TodoyuProjectManager::getProjectPersons(1);
-	}
 
-
+	/**
+	 * Get data of first project
+	 *
+	 * @return	Array
+	 */
 	private function getProjectData() {
 		if( ! $this->hasProjects() ) {
-			$this->createFirstProjectPreset();
+			$this->createEmptyProject();
 		}
 
 		$project	= TodoyuProjectManager::getProject(1);
@@ -109,7 +118,13 @@ class TodoyuFirstStepsWizardStepProject extends TodoyuFirstStepsWizardStep {
 	}
 
 
-	private function createFirstProjectPreset() {
+
+	/**
+	 * Create empty project
+	 *
+	 * @return	Integer
+	 */
+	private function createEmptyProject() {
 		$data	= array(
 			'title'			=> 'My First Project',
 			'id_company'	=> 1
@@ -119,12 +134,24 @@ class TodoyuFirstStepsWizardStepProject extends TodoyuFirstStepsWizardStep {
 	}
 
 
+
+	/**
+	 * Check whether the database already contains a project
+	 *
+	 * @return	Boolean
+	 */
 	private function hasProjects() {
 		return Todoyu::db()->queryHasResult('SELECT id FROM ext_project_project LIMIT 1');
 	}
 
 
 
+	/**
+	 * Update first project
+	 *
+	 * @param	Array	$submittedData
+	 * @return	Integer
+	 */
 	private function saveProject(array $submittedData) {
 		$data	= array(
 			'title'			=> $submittedData['title'],

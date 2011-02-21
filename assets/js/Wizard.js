@@ -17,6 +17,9 @@
  * This copyright notice MUST APPEAR in all copies of the script.
  *****************************************************************************/
 
+/**
+ * Firststeps wizard
+ */
 Todoyu.Ext.firststeps.Wizard = {
 
 
@@ -49,6 +52,7 @@ Todoyu.Ext.firststeps.Wizard = {
 				break;
 
 			case 'employees':
+//				this.markLatestItem();
 				this.initEmployees();
 				break;
 
@@ -61,6 +65,17 @@ Todoyu.Ext.firststeps.Wizard = {
 				break;
 		}
 	},
+
+
+//	markLatestItem: function() {
+//		var idLatestItem = $('wizard-form').down('ul.list').select('li').collect(function(item){
+//			return parseInt(item.id.split('-').last(), 10);
+//		}).max();
+//
+//		$('item-' + idLatestItem).setStyle({
+//			backgroundColor: '#FF0'
+//		});
+//	},
 
 
 

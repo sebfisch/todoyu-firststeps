@@ -19,18 +19,28 @@
 *****************************************************************************/
 
 /**
- * [Enter Class Description]
+ * Wizard step: activities
  *
  * @package		Todoyu
- * @subpackage	[Subpackage]
+ * @subpackage	Firststeps
  */
 class TodoyuFirstStepsWizardStepActivities extends TodoyuFirstStepsWizardStep {
 
+	/**
+	 * Initialize
+	 */
 	protected function init() {
 		$this->table = 'ext_project_worktype';
 	}
 
 
+
+	/**
+	 * Save activities
+	 *
+	 * @param	Array	$data
+	 * @return	Boolean
+	 */
 	public function save(array $data) {
 		$activities	= TodoyuArray::assure($data['activity']);
 		$activities	= TodoyuArray::trim($activities, true);
@@ -43,7 +53,13 @@ class TodoyuFirstStepsWizardStepActivities extends TodoyuFirstStepsWizardStep {
 	}
 
 
-	public function renderContent() {
+
+	/**
+	 * Render content
+	 *
+	 * @return	String
+	 */
+	public function getContent() {
 		if( $this->data === null ) {
 			$this->data = $this->getActivities();
 		}
@@ -52,6 +68,12 @@ class TodoyuFirstStepsWizardStepActivities extends TodoyuFirstStepsWizardStep {
 	}
 
 
+
+	/**
+	 * Get available activities
+	 *
+	 * @return	Array
+	 */
 	private function getActivities() {
 		$activities	= TodoyuWorktypeManager::getAllWorktypes();
 
@@ -59,6 +81,12 @@ class TodoyuFirstStepsWizardStepActivities extends TodoyuFirstStepsWizardStep {
 	}
 
 
+
+	/**
+	 * Save activities
+	 *
+	 * @param	Array	$submittedActivities
+	 */
 	private function saveActivities(array $submittedActivities) {
 		$dbActivities	= $this->getActivities();
 

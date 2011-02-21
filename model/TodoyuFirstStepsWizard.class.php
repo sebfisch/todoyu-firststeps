@@ -19,25 +19,28 @@
 *****************************************************************************/
 
 /**
- * [Enter Class Description]
+ * Firststeps wizard
  *
  * @package		Todoyu
- * @subpackage	[Subpackage]
+ * @subpackage	Firststeps
  */
 class TodoyuFirstStepsWizard extends TodoyuWizard {
 
+	/**
+	 * Initialize wizard with name
+	 */
 	public function __construct() {
 		parent::__construct('firststeps');
 	}
 
+
+	/**
+	 * Get name of first step in the wizard
+	 *
+	 * @return	String
+	 */
 	public function getFirstStep() {
 		return 'start';
-	}
-
-
-
-	private function renderStepStart() {
-
 	}
 
 }

@@ -19,19 +19,29 @@
 *****************************************************************************/
 
 /**
- * [Enter Class Description]
+ * Wizard steps: customers
  *
  * @package		Todoyu
  * @subpackage	Firststeps
  */
 class TodoyuFirstStepsWizardStepCustomers extends TodoyuFirstStepsWizardStep {
 
+	/**
+	 * Initialize
+	 */
 	protected function init() {
 		$this->table	= 'ext_contact_person';
 		$this->formXml	= 'ext/firststeps/config/form/customer.xml';
 	}
 
 
+
+	/**
+	 * Save customer
+	 *
+	 * @param	Array		$data
+	 * @return	Boolean
+	 */
 	public function save(array $data) {
 		$form	= $this->getForm($data);
 
@@ -49,7 +59,13 @@ class TodoyuFirstStepsWizardStepCustomers extends TodoyuFirstStepsWizardStep {
 	}
 
 
-	public function renderContent() {
+
+	/**
+	 * Render content
+	 *
+	 * @return	String
+	 */
+	public function getContent() {
 		$tmpl	= 'ext/firststeps/view/form-with-list.tmpl';
 		$data	= array(
 			'items'	=> $this->getListItems(),
@@ -58,6 +74,7 @@ class TodoyuFirstStepsWizardStepCustomers extends TodoyuFirstStepsWizardStep {
 
 		return render($tmpl, $data);
 	}
+
 
 
 	/**
@@ -86,6 +103,13 @@ class TodoyuFirstStepsWizardStepCustomers extends TodoyuFirstStepsWizardStep {
 	}
 
 
+
+	/**
+	 * Add a customer
+	 *
+	 * @param	Array		$submittedData
+	 * @return	Integer
+	 */
 	private function addCustomer(array $submittedData) {
 		$data	= array(
 			'title'	=> $submittedData['title']

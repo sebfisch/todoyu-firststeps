@@ -19,37 +19,59 @@
 *****************************************************************************/
 
 /**
- * [Enter Class Description]
+ * Wizard step: Add employees
  *
  * @package		Todoyu
  * @subpackage	Firststeps
  */
 class TodoyuFirstStepsWizardStepEmployees extends TodoyuFirstStepsWizardStep {
 
+	/**
+	 * Initialize with table and form
+	 */
 	protected function init() {
 		$this->table	= 'ext_contact_person';
 		$this->formXml	= 'ext/firststeps/config/form/employee.xml';
 	}
 
 
+
+	/**
+	 * Save employee
+	 * Add new record
+	 *
+	 * @param	Array	$data
+	 * @return	Boolean
+	 */
 	public function save(array $data) {
 		$form	= $this->getForm($data);
 
 		if( $form->isValid() ) {
 			$employeeData	= $form->getStorageData();
 
+			$form->clear();
+			$this->data	= array();
+
 			$this->addEmployee($employeeData);
+
+			TodoyuNotification::notifySuccess('Employee was added to the list');
 
 			return true;
 		} else {
-			$this->data = $data;
+			$this->data	= $data;
 
-			return false;
+			 return false;
 		}
 	}
 
 
-	public function renderContent() {
+
+	/**
+	 * Render content
+	 *
+	 * @return	String
+	 */
+	public function getContent() {
 		$tmpl	= 'ext/firststeps/view/form-with-list.tmpl';
 		$data	= array(
 			'items'	=> $this->getListItems(),
@@ -60,13 +82,19 @@ class TodoyuFirstStepsWizardStepEmployees extends TodoyuFirstStepsWizardStep {
 	}
 
 
+
+	/**
+	 * Get all employees as list items
+	 *
+	 * @return	Array
+	 */
 	private function getListItems() {
 		$items		= array();
 		$employees	= $this->getEmployees();
 
 		foreach($employees as $employee) {
 			$items[]	= array(
-				'label'	=> $employee['lastname'] . ' ' . $employee['firstname'] . ' [' . $employee['email'] . ']',
+				'label'	=> $employee['lastname'] . ' ' . $employee['firstname'] . ($employee['email']?' [' . $employee['email'] . ']':''),
 				'id'	=> $employee['id']
 			);
 		}
@@ -86,6 +114,14 @@ class TodoyuFirstStepsWizardStepEmployees extends TodoyuFirstStepsWizardStep {
 	}
 
 
+
+	/**
+	 * Create new employee (person) record
+	 * Add it the the internal company
+	 *
+	 * @param	Array	$submittedData
+	 * @return	Integer
+	 */
 	private function addEmployee(array $submittedData) {
 		$data	= array(
 			'salutation'	=> $submittedData['salutation'],
@@ -108,7 +144,6 @@ class TodoyuFirstStepsWizardStepEmployees extends TodoyuFirstStepsWizardStep {
 		$idJobtype	= intval($submittedData['id_jobtype']);
 
 		TodoyuCompanyManager::addPerson($idCompany, $idPerson, 0, $idJobtype);
-
 
 		return $idPerson;
 	}

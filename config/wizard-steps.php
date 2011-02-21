@@ -25,62 +25,83 @@ Todoyu::$CONFIG['EXT']['firststeps']['wizardsteps'] = array(
 	array(
 		'step'		=> 'start',
 		'position'	=> 10,
-		'label'		=> 'firststeps.wizard.start.label',
-		'class'		=> 'TodoyuFirstStepsWizardStepStart'
+		'class'		=> 'TodoyuFirstStepsWizardStepStart',
+		'title'		=> 'firststeps.wizard.start.title',
+		'info'		=> 'firststeps.wizard.start.info',
+		'help'		=> 'firststeps.wizard.start.help'
 	),
 	array(
 		'step'		=> 'jobtypes',
 		'position'	=> 20,
-		'label'		=> 'firststeps.wizard.jobtypes.label',
-		'class'		=> 'TodoyuFirstStepsWizardStepJobtypes'
+		'class'		=> 'TodoyuFirstStepsWizardStepJobtypes',
+		'title'		=> 'firststeps.wizard.jobtypes.title',
+		'info'		=> 'firststeps.wizard.jobtypes.info',
+		'help'		=> 'firststeps.wizard.jobtypes.help'
+
 	),
 	array(
 		'step'		=> 'projectroles',
 		'position'	=> 30,
-		'label'		=> 'firststeps.wizard.projectroles.label',
-		'class'		=> 'TodoyuFirstStepsWizardStepProjectroles'
+		'class'		=> 'TodoyuFirstStepsWizardStepProjectroles',
+		'title'		=> 'firststeps.wizard.projectroles.title',
+		'info'		=> 'firststeps.wizard.projectroles.info',
+		'help'		=> 'firststeps.wizard.projectroles.help'
 	),
 	array(
 		'step'		=> 'activities',
 		'position'	=> 40,
-		'label'		=> 'firststeps.wizard.activities.label',
-		'class'		=> 'TodoyuFirstStepsWizardStepActivities'
+		'class'		=> 'TodoyuFirstStepsWizardStepActivities',
+		'title'		=> 'firststeps.wizard.activities.title',
+		'info'		=> 'firststeps.wizard.activities.info',
+		'help'		=> 'firststeps.wizard.activities.help'
 	),
 	array(
 		'step'		=> 'userroles',
 		'position'	=> 50,
-		'label'		=> 'firststeps.wizard.userroles.label',
-		'class'		=> 'TodoyuFirstStepsWizardStepUserroles'
+		'class'		=> 'TodoyuFirstStepsWizardStepUserroles',
+		'title'		=> 'firststeps.wizard.userroles.title',
+		'info'		=> 'firststeps.wizard.userroles.info',
+		'help'		=> 'firststeps.wizard.userroles.help'
 	),
 	array(
 		'step'		=> 'company',
 		'position'	=> 60,
-		'label'		=> 'firststeps.wizard.company.label',
-		'class'		=> 'TodoyuFirstStepsWizardStepUserroles'
+		'class'		=> 'TodoyuFirstStepsWizardStepUserroles',
+		'title'		=> 'firststeps.wizard.company.title',
+		'info'		=> 'firststeps.wizard.company.info',
+		'help'		=> 'firststeps.wizard.company.help'
 	),
 	array(
 		'step'		=> 'employees',
 		'position'	=> 70,
-		'label'		=> 'firststeps.wizard.employees.label',
-		'class'		=> 'TodoyuFirstStepsWizardStepEmployees'
+		'class'		=> 'TodoyuFirstStepsWizardStepEmployees',
+		'title'		=> 'firststeps.wizard.employees.title',
+		'info'		=> 'firststeps.wizard.employees.info',
+		'help'		=> 'firststeps.wizard.employees.help'
 	),
 	array(
 		'step'		=> 'customers',
 		'position'	=> 80,
-		'label'		=> 'firststeps.wizard.customers.label',
-		'class'		=> 'TodoyuFirstStepsWizardStepCustomers'
+		'class'		=> 'TodoyuFirstStepsWizardStepCustomers',
+		'title'		=> 'firststeps.wizard.customers.title',
+		'info'		=> 'firststeps.wizard.customers.info',
+		'help'		=> 'firststeps.wizard.customers.help'
 	),
 	array(
 		'step'		=> 'project',
 		'position'	=> 90,
-		'label'		=> 'firststeps.wizard.project.label',
-		'class'		=> 'TodoyuFirstStepsWizardStepProject'
+		'class'		=> 'TodoyuFirstStepsWizardStepProject',
+		'title'		=> 'firststeps.wizard.project.title',
+		'info'		=> 'firststeps.wizard.project.info',
+		'help'		=> 'firststeps.wizard.project.help'
 	),
 	array(
 		'step'		=> 'finish',
 		'position'	=> 100,
-		'label'		=> 'firststeps.wizard.finish.label',
-		'class'		=> 'TodoyuFirstStepsWizardStepFinish'
+		'class'		=> 'TodoyuFirstStepsWizardStepFinish',
+		'title'		=> 'firststeps.wizard.finish.title',
+		'info'		=> 'firststeps.wizard.finish.info',
+		'help'		=> 'firststeps.wizard.finish.help'
 	)
 
 );

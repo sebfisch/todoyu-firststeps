@@ -26,11 +26,21 @@
  */
 class TodoyuFirstStepsWizardStepUserroles extends TodoyuFirstStepsWizardStep {
 
+	/**
+	 * Initialize steps
+	 */
 	protected function init() {
 		$this->table = 'system_role';
 	}
 
 
+
+	/**
+	 * Save user role
+	 *
+	 * @param	Array	$data
+	 * @return	Boolean
+	 */
 	public function save(array $data) {
 		$roles	= TodoyuArray::assure($data['userrole']);
 		$roles	= TodoyuArray::trim($roles, true);
@@ -43,7 +53,12 @@ class TodoyuFirstStepsWizardStepUserroles extends TodoyuFirstStepsWizardStep {
 	}
 
 
-	public function renderContent() {
+	/**
+	 * Render content (auto extending list)
+	 *
+	 * @return	String
+	 */
+	public function getContent() {
 		if( $this->data === null ) {
 			$this->data = $this->getRoles();
 		}
@@ -52,6 +67,12 @@ class TodoyuFirstStepsWizardStepUserroles extends TodoyuFirstStepsWizardStep {
 	}
 
 
+
+	/**
+	 * Get existing roles
+	 *
+	 * @return	Array
+	 */
 	private function getRoles() {
 		$roles	= TodoyuRoleManager::getAllRoles();
 
@@ -59,6 +80,12 @@ class TodoyuFirstStepsWizardStepUserroles extends TodoyuFirstStepsWizardStep {
 	}
 
 
+
+	/**
+	 * Save the roles
+	 *
+	 * @param	Array		$submittedRoles
+	 */
 	private function saveRoles(array $submittedRoles) {
 		$dbRoles	= $this->getRoles();
 		$extraFields= array(

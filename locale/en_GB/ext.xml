@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <labels>
 	<label index="ext.title">Firststeps</label>
-	<label index="wizard.start.label">Start first step wizard</label>
-	<label index="wizard.jobtypes.label">Job Types</label>
-	<label index="wizard.projectroles.label">Project Roles</label>
-	<label index="wizard.activities.label">Activities</label>
-	<label index="wizard.userroles.label">User Roles</label>
-	<label index="wizard.company.label">Your Company</label>
-	<label index="wizard.employees.label">Employees</label>
-	<label index="wizard.customers.label">Customers</label>
-	<label index="wizard.project.label">First Project</label>
-	<label index="wizard.finish.label">Finish Wizard</label>
+	<label index="wizard.start.title">Start first step wizard</label>
+	<label index="wizard.start.info">This is the start info text</label>
+	<label index="wizard.start.help">This is the start help text</label>
+	<label index="wizard.jobtypes.title">Job Types</label>
+	<label index="wizard.jobtypes.info">This is the jobtypes info text</label>
+	<label index="wizard.jobtypes.help">This is the jobtypes help text</label>
+	<label index="wizard.projectroles.title">Project Roles</label>
+	<label index="wizard.projectroles.info">This is the projectroles info text</label>
+	<label index="wizard.projectroles.help">This is the projectroles help text</label>
+	<label index="wizard.activities.title">Activities</label>
+	<label index="wizard.activities.info">This is the activities info text</label>
+	<label index="wizard.activities.help">This is the activities help text</label>
+	<label index="wizard.userroles.title">User Roles</label>
+	<label index="wizard.userroles.info">This is the userroles info text</label>
+	<label index="wizard.userroles.help">This is the userroles help text</label>
+	<label index="wizard.company.title">Your Company</label>
+	<label index="wizard.company.info">This is the company info text</label>
+	<label index="wizard.company.help">This is the company help text</label>
+	<label index="wizard.employees.title">Employees</label>
+	<label index="wizard.employees.info">This is the employees info text</label>
+	<label index="wizard.employees.help">This is the employees help text</label>
+	<label index="wizard.customers.title">Customers</label>
+	<label index="wizard.customers.info">This is the customers info text</label>
+	<label index="wizard.customers.help">This is the customers help text</label>
+	<label index="wizard.project.title">First Project</label>
+	<label index="wizard.project.info">This is the jobtypes info text</label>
+	<label index="wizard.project.help">This is the jobtypes help text</label>
+	<label index="wizard.finish.title">Finish Wizard</label>
+	<label index="wizard.finish.info">This is the jobtypes info text</label>
+	<label index="wizard.finish.help">This is the jobtypes help text</label>
 </labels>

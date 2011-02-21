@@ -19,19 +19,24 @@
 *****************************************************************************/
 
 /**
- * [Enter Class Description]
+ * Wizard step: job types
  *
  * @package		Todoyu
  * @subpackage	Firststeps
  */
 class TodoyuFirstStepsWizardStepJobtypes extends TodoyuFirstStepsWizardStep {
 
+	/**
+	 * Initialize
+	 */
 	protected function init() {
 		$this->table = 'ext_contact_jobtype';
 	}
 
+
+
 	/**
-	 * Save step data
+	 * Save job types
 	 *
 	 * @param	Array		$data
 	 * @return	Boolean
@@ -54,7 +59,7 @@ class TodoyuFirstStepsWizardStepJobtypes extends TodoyuFirstStepsWizardStep {
 	 *
 	 * @return	String
 	 */
-	public function renderContent() {
+	public function getContent() {
 		if( $this->data === null ) {
 			$this->data = $this->getJobtypes();
 		}
@@ -65,14 +70,10 @@ class TodoyuFirstStepsWizardStepJobtypes extends TodoyuFirstStepsWizardStep {
 
 
 	/**
-	 * Render step help
-	 * @return string
+	 * Get available job types from db
+	 *
+	 * @return	Array
 	 */
-	public function renderHelp() {
-		return 'This is the help';
-	}
-
-
 	private function getJobtypes() {
 		$jobTypes	= TodoyuJobTypeManager::getAllJobTypes();
 		$labels		= TodoyuArray::getColumn($jobTypes, 'title');
@@ -81,6 +82,12 @@ class TodoyuFirstStepsWizardStepJobtypes extends TodoyuFirstStepsWizardStep {
 	}
 
 
+
+	/**
+	 * Save job types
+	 *
+	 * @param	Array		$submittedJobTypes
+	 */
 	private function saveJobTypes(array $submittedJobTypes) {
 		$dbJobTypes	= $this->getJobtypes();
 

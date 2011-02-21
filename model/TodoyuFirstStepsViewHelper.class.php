@@ -19,13 +19,19 @@
 *****************************************************************************/
 
 /**
- * [Enter Class Description]
+ * Firststeps view helper
  *
  * @package		Todoyu
- * @subpackage	[Subpackage]
+ * @subpackage	Firststeps
  */
 class TodoyuFirstStepsViewHelper {
 
+	/**
+	 * Get options for person form element
+	 *
+	 * @param	TodoyuFormElement		$field
+	 * @return	Array
+	 */
 	public static function getPersonOptions(TodoyuFormElement $field) {
 		$loginPersons	= TodoyuPersonManager::getAllLoginPersons();
 		$options		= array();

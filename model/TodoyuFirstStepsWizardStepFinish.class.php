@@ -19,28 +19,35 @@
 *****************************************************************************/
 
 /**
- * [Enter Class Description]
+ * Wizard step: finish
  *
  * @package		Todoyu
  * @subpackage	Firststeps
  */
 class TodoyuFirstStepsWizardStepFinish extends TodoyuFirstStepsWizardStep {
 
+	/**
+	 * Nothing to save
+	 *
+	 * @param	Array	$data
+	 * @return	Boolean
+	 */
 	public function save(array $data) {
 		return true;
 	}
 
 
-	public function renderContent() {
+
+	/**
+	 * Render content
+	 *
+	 * @return	String
+	 */
+	public function getContent() {
 		$tmpl	= 'ext/firststeps/view/wizard-step-finish.tmpl';
 		$data	= array();
 
 		return render($tmpl, $data);
-	}
-
-
-	public function renderHelp() {
-		return 'Das ist die Finish hilfe';
 	}
 
 }

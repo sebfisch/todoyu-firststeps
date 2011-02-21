@@ -1,5 +1,7 @@
 .wizardFirststeps ul.autoextend li {
 	padding:10px;
+	text-align:left;
+	padding-left:40px;
 }
 
 .wizardFirststeps ul.autoextend li input {

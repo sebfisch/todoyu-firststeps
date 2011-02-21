@@ -19,13 +19,21 @@
 *****************************************************************************/
 
 /**
- * [Enter Class Description]
+ * Firststeps renderer
  *
  * @package		Todoyu
- * @subpackage	[Subpackage]
+ * @subpackage	Firststeps
  */
 class TodoyuFirstStepsRenderer {
 
+	/**
+	 * Render items with the itemlist template
+	 *
+	 * @param	Array	$items
+	 * @param	String	$fieldName
+	 * @param	String	$listClass
+	 * @return	String
+	 */
 	public static function renderItemList(array $items, $fieldName, $listClass = '') {
 		$tmpl	= 'ext/firststeps/view/itemlist.tmpl';
 		$items	= array(

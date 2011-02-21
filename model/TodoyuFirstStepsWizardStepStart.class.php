@@ -19,7 +19,7 @@
 *****************************************************************************/
 
 /**
- * [Enter Class Description]
+ * Wizard step: start
  *
  * @package		Todoyu
  * @subpackage	Firststeps
@@ -43,16 +43,11 @@ class TodoyuFirstStepsWizardStepStart extends TodoyuFirstStepsWizardStep {
 	 *
 	 * @return	String
 	 */
-	public function renderContent() {
+	public function getContent() {
 		$tmpl	= 'ext/firststeps/view/wizard-step-start.tmpl';
 		$data	= array();
 
 		return render($tmpl, $data);
-	}
-
-
-	public function renderHelp() {
-		return 'Das ist die Start hilfe';
 	}
 
 }

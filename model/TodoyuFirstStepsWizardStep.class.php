@@ -19,22 +19,40 @@
 *****************************************************************************/
 
 /**
- * [Enter Class Description]
+ * Wizard step with special fields for firststeps wizard
  *
  * @package		Todoyu
- * @subpackage	[Subpackage]
+ * @subpackage	Firststeps
  */
 abstract class TodoyuFirstStepsWizardStep extends TodoyuWizardStep {
 
+	/**
+	 * Used database table
+	 *
+	 * @var	String
+	 */
 	protected $table;
 
-	protected $formXml;
 	/**
+	 * Path to used form xml
+	 *
+	 * @var	String
+	 */
+	protected $formXml;
+
+	/**
+	 * Form instance
+	 *
 	 * @var	TodoyuForm	$form
 	 */
 	protected $form;
 
+
+
 	/**
+	 * Get form instance
+	 * Set data if given
+	 *
 	 * @param	Array		$data
 	 * @return	TodoyuForm
 	 */

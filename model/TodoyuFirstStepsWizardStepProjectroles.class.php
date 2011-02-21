@@ -19,19 +19,27 @@
 *****************************************************************************/
 
 /**
- * [Enter Class Description]
+ * Wizard step: project roles
  *
  * @package		Todoyu
- * @subpackage	[Subpackage]
+ * @subpackage	Firststeps
  */
 class TodoyuFirstStepsWizardStepProjectroles extends TodoyuFirstStepsWizardStep {
 
-
+	/**
+	 * Initialize
+	 */
 	protected function init() {
 		$this->table = 'ext_project_role';
 	}
 
 
+	/**
+	 * Save project roles
+	 *
+	 * @param	Array		$data
+	 * @return	Boolean
+	 */
 	public function save(array $data) {
 		$projectRoles	= TodoyuArray::assure($data['projectrole']);
 		$projectRoles	= TodoyuArray::trim($projectRoles, true);
@@ -44,7 +52,13 @@ class TodoyuFirstStepsWizardStepProjectroles extends TodoyuFirstStepsWizardStep 
 	}
 
 
-	public function renderContent() {
+
+	/**
+	 * Render content
+	 *
+	 * @return	String
+	 */
+	public function getContent() {
 		if( $this->data === null ) {
 			$this->data = $this->getProjectRoles();
 		}
@@ -53,6 +67,12 @@ class TodoyuFirstStepsWizardStepProjectroles extends TodoyuFirstStepsWizardStep 
 	}
 
 
+
+	/**
+	 * Get available project roles
+	 *
+	 * @return	Array
+	 */
 	private function getProjectRoles() {
 		$projectRoles	= TodoyuProjectroleManager::getProjectroles(true);
 
@@ -60,6 +80,12 @@ class TodoyuFirstStepsWizardStepProjectroles extends TodoyuFirstStepsWizardStep 
 	}
 
 
+
+	/**
+	 * Save project roles
+	 *
+	 * @param	Array		$submittedProjectRoles
+	 */
 	private function saveProjectRoles(array $submittedProjectRoles) {
 		$dbProjectRoles	= $this->getProjectRoles();
 

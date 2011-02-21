@@ -19,19 +19,29 @@
 *****************************************************************************/
 
 /**
- * [Enter Class Description]
+ * Wizard step: company
  *
  * @package		Todoyu
  * @subpackage	Firststeps
  */
 class TodoyuFirstStepsWizardStepCompany extends TodoyuFirstStepsWizardStep {
 
+	/**
+	 * Initialize
+	 */
 	protected function init() {
 		$this->table	= 'ext_contact_company';
 		$this->formXml	= 'ext/firststeps/config/form/company.xml';
 	}
 
 
+
+	/**
+	 * Save company
+	 *
+	 * @param	Array	$data
+	 * @return	Boolean
+	 */
 	public function save(array $data) {
 		$form	= $this->getForm($data);
 
@@ -46,11 +56,16 @@ class TodoyuFirstStepsWizardStepCompany extends TodoyuFirstStepsWizardStep {
 
 			return false;
 		}
-
 	}
 
 
-	public function renderContent() {
+
+	/**
+	 * Render content
+	 *
+	 * @return	String
+	 */
+	public function getContent() {
 		if( $this->data === null ) {
 			$this->data = $this->getCompanyData();
 		}
@@ -60,6 +75,11 @@ class TodoyuFirstStepsWizardStepCompany extends TodoyuFirstStepsWizardStep {
 
 
 
+	/**
+	 * Get data for company incl address
+	 *
+	 * @return	Array
+	 */
 	private function getCompanyData() {
 		$company	= $this->getCompany();
 		$addresses	= $company->getAddresses();
@@ -75,8 +95,11 @@ class TodoyuFirstStepsWizardStepCompany extends TodoyuFirstStepsWizardStep {
 	}
 
 
+
 	/**
-	 * @return TodoyuCompany
+	 * Get first company
+	 *
+	 * @return	TodoyuCompany
 	 */
 	private function getCompany() {
 		return TodoyuCompanyManager::getCompany(1);
@@ -84,10 +107,11 @@ class TodoyuFirstStepsWizardStepCompany extends TodoyuFirstStepsWizardStep {
 
 
 
-
-
-
-
+	/**
+	 * Save/update company
+	 *
+	 * @param 	Array	$submittedData
+	 */
 	private function saveCompany(array $submittedData) {
 		$data	= array(
 			'title'	=> $submittedData['title']
