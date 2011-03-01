@@ -89,7 +89,7 @@ class TodoyuFirstStepsWizardStepCustomers extends TodoyuFirstStepsWizardStep {
 		);
 		$where	= 'is_internal = 0';
 
-		$companies	= TodoyuCompanyManager::getAllCompanies($fields, $where);
+		$companies	= TodoyuContactCompanyManager::getAllCompanies($fields, $where);
 		$items		= array();
 
 		foreach($companies as $company) {
@@ -115,7 +115,7 @@ class TodoyuFirstStepsWizardStepCustomers extends TodoyuFirstStepsWizardStep {
 			'title'	=> $submittedData['title']
 		);
 
-		$idCompany	= TodoyuCompanyManager::addCompany($data);
+		$idCompany	= TodoyuContactCompanyManager::addCompany($data);
 
 		$data	= array(
 			'street'	=> $submittedData['street'],
@@ -123,7 +123,7 @@ class TodoyuFirstStepsWizardStepCustomers extends TodoyuFirstStepsWizardStep {
 			'city'		=> $submittedData['city']
 		);
 
-		$idAddress	= TodoyuAddressManager::addAddress($data);
+		$idAddress	= TodoyuContactAddressManager::addAddress($data);
 
 		TodoyuDbHelper::addMMLink('ext_contact_mm_company_address', 'id_company', 'id_address', $idCompany, $idAddress);
 

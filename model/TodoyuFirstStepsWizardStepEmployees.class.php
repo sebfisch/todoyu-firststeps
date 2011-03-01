@@ -110,7 +110,7 @@ class TodoyuFirstStepsWizardStepEmployees extends TodoyuFirstStepsWizardStep {
 	 * @return	Array
 	 */
 	private function getEmployees() {
-		return TodoyuPersonManager::getInternalPersons();
+		return TodoyuContactPersonManager::getInternalPersons();
 	}
 
 
@@ -139,11 +139,11 @@ class TodoyuFirstStepsWizardStepEmployees extends TodoyuFirstStepsWizardStep {
 		$idPerson	= TodoyuRecordManager::addRecord($this->table, $data);
 
 
-		$companyIDs	= TodoyuCompanyManager::getInternalCompanyIDs();
+		$companyIDs	= TodoyuContactCompanyManager::getInternalCompanyIDs();
 		$idCompany	= intval($companyIDs[0]);
 		$idJobtype	= intval($submittedData['id_jobtype']);
 
-		TodoyuCompanyManager::addPerson($idCompany, $idPerson, 0, $idJobtype);
+		TodoyuContactCompanyManager::addPerson($idCompany, $idPerson, 0, $idJobtype);
 
 		return $idPerson;
 	}

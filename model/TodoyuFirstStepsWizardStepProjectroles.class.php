@@ -74,7 +74,7 @@ class TodoyuFirstStepsWizardStepProjectroles extends TodoyuFirstStepsWizardStep 
 	 * @return	Array
 	 */
 	private function getProjectRoles() {
-		$projectRoles	= TodoyuProjectroleManager::getProjectroles(true);
+		$projectRoles	= TodoyuProjectProjectroleManager::getProjectroles(true);
 
 		return TodoyuArray::getColumn($projectRoles, 'title');
 	}

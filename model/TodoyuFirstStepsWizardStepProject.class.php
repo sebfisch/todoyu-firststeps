@@ -87,7 +87,7 @@ class TodoyuFirstStepsWizardStepProject extends TodoyuFirstStepsWizardStep {
 	 * @return	Array
 	 */
 	private function getListItems() {
-		$persons	= TodoyuProjectManager::getProjectPersons(1);
+		$persons	= TodoyuProjectProjectManager::getProjectPersons(1);
 		$items		= array();
 
 		foreach($persons as $person) {
@@ -112,7 +112,7 @@ class TodoyuFirstStepsWizardStepProject extends TodoyuFirstStepsWizardStep {
 			$this->createEmptyProject();
 		}
 
-		$project	= TodoyuProjectManager::getProject(1);
+		$project	= TodoyuProjectProjectManager::getProject(1);
 
 		return $project->getTemplateData();
 	}
@@ -130,7 +130,7 @@ class TodoyuFirstStepsWizardStepProject extends TodoyuFirstStepsWizardStep {
 			'id_company'	=> 1
 		);
 
-		return TodoyuProjectManager::addProject($data);
+		return TodoyuProjectProjectManager::addProject($data);
 	}
 
 
@@ -162,13 +162,13 @@ class TodoyuFirstStepsWizardStepProject extends TodoyuFirstStepsWizardStep {
 			'date_deadline'	=> $submittedData['date_end'],
 		);
 
-		$idProject	= TodoyuProjectManager::updateProject(1, $data);
+		$idProject	= TodoyuProjectProjectManager::updateProject(1, $data);
 
 		$idPerson	= intval($submittedData['id_person']);
 		$idRole		= intval($submittedData['id_role']);
 
 		if( $idPerson > 0 && $idRole > 0 ) {
-			TodoyuProjectManager::addPerson(1, $idPerson, $idRole);
+			TodoyuProjectProjectManager::addPerson(1, $idPerson, $idRole);
 		}
 
 		return $idProject;

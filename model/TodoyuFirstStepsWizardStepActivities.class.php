@@ -30,7 +30,7 @@ class TodoyuFirstStepsWizardStepActivities extends TodoyuFirstStepsWizardStep {
 	 * Initialize
 	 */
 	protected function init() {
-		$this->table = 'ext_project_worktype';
+		$this->table = 'ext_project_activity';
 	}
 
 
@@ -75,7 +75,7 @@ class TodoyuFirstStepsWizardStepActivities extends TodoyuFirstStepsWizardStep {
 	 * @return	Array
 	 */
 	private function getActivities() {
-		$activities	= TodoyuWorktypeManager::getAllWorktypes();
+		$activities	= TodoyuProjectActivityManager::getAllActivities();
 
 		return TodoyuArray::getColumn($activities, 'title');
 	}

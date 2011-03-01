@@ -75,7 +75,7 @@ class TodoyuFirstStepsWizardStepJobtypes extends TodoyuFirstStepsWizardStep {
 	 * @return	Array
 	 */
 	private function getJobtypes() {
-		$jobTypes	= TodoyuJobTypeManager::getAllJobTypes();
+		$jobTypes	= TodoyuContactJobTypeManager::getAllJobTypes();
 		$labels		= TodoyuArray::getColumn($jobTypes, 'title');
 
 		return $labels;

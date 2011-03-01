@@ -30,7 +30,7 @@
 					<label>project.attr.company</label>
 					<config>
 						<acName>company</acName>
-						<acLabel>TodoyuCompanyManager::getLabel</acLabel>
+						<acLabel>TodoyuContactCompanyManager::getLabel</acLabel>
 						<options>
 							<onComplete>Todoyu.Ext.project.Project.Edit.onCompanyAutocomplete</onComplete>
 						</options>
@@ -75,7 +75,7 @@
 				<field type="select" name="id_role">
 					<label>project.attr.persons.role</label>
 					<source type="function">
-						<function>TodoyuProjectViewHelper::getProjectroleOptions</function>
+						<function>TodoyuProjectProjectViewHelper::getProjectroleOptions</function>
 					</source>
 				</field>
 

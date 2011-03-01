@@ -44,21 +44,21 @@ class TodoyuFirststepsExtActionController extends TodoyuActionController {
 	public function removeEmployeeAction(array $params) {
 		$idPerson	= intval($params['person']);
 
-		TodoyuPersonManager::deletePerson($idPerson);
+		TodoyuContactPersonManager::deletePerson($idPerson);
 	}
 
 
 	public function removeCompanyAction(array $params) {
 		$idCompany	= intval($params['company']);
 
-		TodoyuCompanyManager::deleteCompany($idCompany);
+		TodoyuContactCompanyManager::deleteCompany($idCompany);
 	}
 
 	public function removeAssignedPersonAction(array $params) {
 		$idPerson	= intval($params['person']);
 		$idProject	= intval($params['project']);
 
-		TodoyuProjectManager::removeProjectPerson($idProject, $idPerson);
+		TodoyuProjectProjectManager::removeProjectPerson($idProject, $idPerson);
 	}
 
 

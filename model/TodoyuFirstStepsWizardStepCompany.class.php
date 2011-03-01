@@ -99,10 +99,10 @@ class TodoyuFirstStepsWizardStepCompany extends TodoyuFirstStepsWizardStep {
 	/**
 	 * Get first company
 	 *
-	 * @return	TodoyuCompany
+	 * @return	TodoyuContactCompany
 	 */
 	private function getCompany() {
-		return TodoyuCompanyManager::getCompany(1);
+		return TodoyuContactCompanyManager::getCompany(1);
 	}
 
 
@@ -129,7 +129,7 @@ class TodoyuFirstStepsWizardStepCompany extends TodoyuFirstStepsWizardStep {
 			'city'		=> $submittedData['city']
 		);
 
-		TodoyuAddressManager::updateAddress($idAddress, $data);
+		TodoyuContactAddressManager::updateAddress($idAddress, $data);
 	}
 
 }

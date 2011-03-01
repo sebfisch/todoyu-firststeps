@@ -33,7 +33,7 @@ class TodoyuFirstStepsViewHelper {
 	 * @return	Array
 	 */
 	public static function getPersonOptions(TodoyuFormElement $field) {
-		$loginPersons	= TodoyuPersonManager::getAllLoginPersons();
+		$loginPersons	= TodoyuContactPersonManager::getAllLoginPersons();
 		$options		= array();
 
 		$options[] = array(
