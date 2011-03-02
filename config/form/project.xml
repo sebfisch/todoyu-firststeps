@@ -9,15 +9,15 @@
 			<elements>
 
 				<field type="text" name="title">
-					<label>core.title</label>
+					<label>core.global.title</label>
 					<validate>
-						<isNotEmpty msg="LLL:project.form.validation.title"/>
+						<isNotEmpty msg="LLL:project.ext.form.validation.title"/>
 					</validate>
 					<required/>
 				</field>
 
 				<field type="RTE" name="description">
-					<label>core.description</label>
+					<label>core.global.description</label>
 					<tinymce>
 						<theme>simple</theme>
 						<width>100%</width>
@@ -27,7 +27,7 @@
 				</field>
 
 				<field type="textAC" name="id_company">
-					<label>project.attr.company</label>
+					<label>project.ext.ext.attr.company</label>
 					<config>
 						<acName>company</acName>
 						<acLabel>TodoyuContactCompanyManager::getLabel</acLabel>
@@ -35,11 +35,11 @@
 							<onComplete>Todoyu.Ext.project.Project.Edit.onCompanyAutocomplete</onComplete>
 						</options>
 					</config>
-					<required label="LLL:project.form.validation.company" />
+					<required label="LLL:project.ext.form.validation.company" />
 				</field>
 
 				<field type="date" name="date_start">
-					<label>project.attr.date_start</label>
+					<label>project.ext.ext.attr.date_start</label>
 					<validate>
 						<dateNotAfter>
 							<field>date_end</field>
@@ -49,7 +49,7 @@
 				</field>
 
 				<field type="date" name="date_end">
-					<label>project.attr.date_end</label>
+					<label>project.ext.ext.attr.date_end</label>
 					<validate>
 						<dateAfter>
 							<field>date_start</field>
@@ -66,14 +66,14 @@
 			<elements>
 
 				<field type="select" name="id_person">
-					<label>contact.company.attr.person</label>
+					<label>contact.ext.company.attr.person</label>
 					<source type="function">
 						<function>TodoyuFirstStepsViewHelper::getPersonOptions</function>
 					</source>
 				</field>
 
 				<field type="select" name="id_role">
-					<label>project.attr.persons.role</label>
+					<label>project.ext.ext.attr.persons.role</label>
 					<source type="function">
 						<function>TodoyuProjectProjectViewHelper::getProjectroleOptions</function>
 					</source>

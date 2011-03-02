@@ -26,82 +26,82 @@ Todoyu::$CONFIG['EXT']['firststeps']['wizardsteps'] = array(
 		'step'		=> 'start',
 		'position'	=> 10,
 		'class'		=> 'TodoyuFirstStepsWizardStepStart',
-		'title'		=> 'firststeps.wizard.start.title',
-		'info'		=> 'firststeps.wizard.start.info',
-		'help'		=> 'firststeps.wizard.start.help'
+		'title'		=> 'firststeps.ext.wizard.start.title',
+		'info'		=> 'firststeps.ext.wizard.start.info',
+		'help'		=> 'firststeps.ext.wizard.start.help'
 	),
 	array(
 		'step'		=> 'jobtypes',
 		'position'	=> 20,
 		'class'		=> 'TodoyuFirstStepsWizardStepJobtypes',
-		'title'		=> 'firststeps.wizard.jobtypes.title',
-		'info'		=> 'firststeps.wizard.jobtypes.info',
-		'help'		=> 'firststeps.wizard.jobtypes.help'
+		'title'		=> 'firststeps.ext.wizard.jobtypes.title',
+		'info'		=> 'firststeps.ext.wizard.jobtypes.info',
+		'help'		=> 'firststeps.ext.wizard.jobtypes.help'
 
 	),
 	array(
 		'step'		=> 'projectroles',
 		'position'	=> 30,
 		'class'		=> 'TodoyuFirstStepsWizardStepProjectroles',
-		'title'		=> 'firststeps.wizard.projectroles.title',
-		'info'		=> 'firststeps.wizard.projectroles.info',
-		'help'		=> 'firststeps.wizard.projectroles.help'
+		'title'		=> 'firststeps.ext.wizard.projectroles.title',
+		'info'		=> 'firststeps.ext.wizard.projectroles.info',
+		'help'		=> 'firststeps.ext.wizard.projectroles.help'
 	),
 	array(
 		'step'		=> 'activities',
 		'position'	=> 40,
 		'class'		=> 'TodoyuFirstStepsWizardStepActivities',
-		'title'		=> 'firststeps.wizard.activities.title',
-		'info'		=> 'firststeps.wizard.activities.info',
-		'help'		=> 'firststeps.wizard.activities.help'
+		'title'		=> 'firststeps.ext.wizard.activities.title',
+		'info'		=> 'firststeps.ext.wizard.activities.info',
+		'help'		=> 'firststeps.ext.wizard.activities.help'
 	),
 	array(
 		'step'		=> 'userroles',
 		'position'	=> 50,
 		'class'		=> 'TodoyuFirstStepsWizardStepUserroles',
-		'title'		=> 'firststeps.wizard.userroles.title',
-		'info'		=> 'firststeps.wizard.userroles.info',
-		'help'		=> 'firststeps.wizard.userroles.help'
+		'title'		=> 'firststeps.ext.wizard.userroles.title',
+		'info'		=> 'firststeps.ext.wizard.userroles.info',
+		'help'		=> 'firststeps.ext.wizard.userroles.help'
 	),
 	array(
 		'step'		=> 'company',
 		'position'	=> 60,
 		'class'		=> 'TodoyuFirstStepsWizardStepUserroles',
-		'title'		=> 'firststeps.wizard.company.title',
-		'info'		=> 'firststeps.wizard.company.info',
-		'help'		=> 'firststeps.wizard.company.help'
+		'title'		=> 'firststeps.ext.wizard.company.title',
+		'info'		=> 'firststeps.ext.wizard.company.info',
+		'help'		=> 'firststeps.ext.wizard.company.help'
 	),
 	array(
 		'step'		=> 'employees',
 		'position'	=> 70,
 		'class'		=> 'TodoyuFirstStepsWizardStepEmployees',
-		'title'		=> 'firststeps.wizard.employees.title',
-		'info'		=> 'firststeps.wizard.employees.info',
-		'help'		=> 'firststeps.wizard.employees.help'
+		'title'		=> 'firststeps.ext.wizard.employees.title',
+		'info'		=> 'firststeps.ext.wizard.employees.info',
+		'help'		=> 'firststeps.ext.wizard.employees.help'
 	),
 	array(
 		'step'		=> 'customers',
 		'position'	=> 80,
 		'class'		=> 'TodoyuFirstStepsWizardStepCustomers',
-		'title'		=> 'firststeps.wizard.customers.title',
-		'info'		=> 'firststeps.wizard.customers.info',
-		'help'		=> 'firststeps.wizard.customers.help'
+		'title'		=> 'firststeps.ext.wizard.customers.title',
+		'info'		=> 'firststeps.ext.wizard.customers.info',
+		'help'		=> 'firststeps.ext.wizard.customers.help'
 	),
 	array(
 		'step'		=> 'project',
 		'position'	=> 90,
 		'class'		=> 'TodoyuFirstStepsWizardStepProject',
-		'title'		=> 'firststeps.wizard.project.title',
-		'info'		=> 'firststeps.wizard.project.info',
-		'help'		=> 'firststeps.wizard.project.help'
+		'title'		=> 'firststeps.ext.wizard.project.title',
+		'info'		=> 'firststeps.ext.wizard.project.info',
+		'help'		=> 'firststeps.ext.wizard.project.help'
 	),
 	array(
 		'step'		=> 'finish',
 		'position'	=> 100,
 		'class'		=> 'TodoyuFirstStepsWizardStepFinish',
-		'title'		=> 'firststeps.wizard.finish.title',
-		'info'		=> 'firststeps.wizard.finish.info',
-		'help'		=> 'firststeps.wizard.finish.help'
+		'title'		=> 'firststeps.ext.wizard.finish.title',
+		'info'		=> 'firststeps.ext.wizard.finish.info',
+		'help'		=> 'firststeps.ext.wizard.finish.help'
 	)
 
 );
