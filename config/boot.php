@@ -24,7 +24,4 @@ define('PATH_EXT_FIRSTSTEPS', PATH_EXT . '/firststeps');
 
 require_once( PATH_EXT_FIRSTSTEPS . '/config/constants.php' );
 
-	// Register module locales
-//TodoyuLabelManager::register('firststeps', 'firststeps', 'ext.xml');
-
 ?>
