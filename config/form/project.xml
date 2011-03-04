@@ -27,7 +27,7 @@
 				</field>
 
 				<field type="textAC" name="id_company">
-					<label>project.ext.ext.attr.company</label>
+					<label>project.ext.attr.company</label>
 					<config>
 						<acName>company</acName>
 						<acLabel>TodoyuContactCompanyManager::getLabel</acLabel>
@@ -39,7 +39,7 @@
 				</field>
 
 				<field type="date" name="date_start">
-					<label>project.ext.ext.attr.date_start</label>
+					<label>project.ext.attr.date_start</label>
 					<validate>
 						<dateNotAfter>
 							<field>date_end</field>
@@ -49,7 +49,7 @@
 				</field>
 
 				<field type="date" name="date_end">
-					<label>project.ext.ext.attr.date_end</label>
+					<label>project.ext.attr.date_end</label>
 					<validate>
 						<dateAfter>
 							<field>date_start</field>
@@ -73,7 +73,7 @@
 				</field>
 
 				<field type="select" name="id_role">
-					<label>project.ext.ext.attr.persons.role</label>
+					<label>project.ext.attr.persons.role</label>
 					<source type="function">
 						<function>TodoyuProjectProjectViewHelper::getProjectroleOptions</function>
 					</source>
