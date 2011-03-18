@@ -15,7 +15,7 @@
 	margin-bottom:-1px;
 	width:16px;
 	height:16px;
-	background:url(../../../../core/assets/img/icons.png) no-repeat 0 -358px;
+	background:url(../../../../core/asset/img/icons.png) no-repeat 0 -358px;
 	margin-left:5px;
 	cursor:pointer;
 }
@@ -38,6 +38,6 @@
 	clear:none;
 	width:16px;
 	height:16px;
-	background:url(../../../../core/assets/img/icons.png) no-repeat 0 -358px;
+	background:url(../../../../core/asset/img/icons.png) no-repeat 0 -358px;
 	cursor:pointer;
 }

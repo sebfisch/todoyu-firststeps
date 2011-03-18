@@ -28,21 +28,21 @@
 Todoyu::$CONFIG['EXT']['firststeps']['assets'] = array(
 	'js' => array(
 		array(
-			'file'		=> 'ext/firststeps/assets/js/Ext.js',
+			'file'		=> 'ext/firststeps/asset/js/Ext.js',
 			'position'	=> 100
 		),
 		array(
-			'file'		=> 'ext/firststeps/assets/js/Wizard.js',
+			'file'		=> 'ext/firststeps/asset/js/Wizard.js',
 			'position'	=> 101
 		)
 	),
 	'css' => array(
 		array(
-			'file'		=> 'ext/firststeps/assets/css/ext.css',
+			'file'		=> 'ext/firststeps/asset/css/ext.css',
 			'position'	=> 100
 		),
 		array(
-			'file'		=> 'ext/firststeps/assets/css/wizard.css',
+			'file'		=> 'ext/firststeps/asset/css/wizard.css',
 			'position'	=> 100
 		)
 	)
