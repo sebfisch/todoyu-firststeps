@@ -19,7 +19,7 @@
 *****************************************************************************/
 
 	// Declare ext ID, path
-define('EXTID_FIRSTSTEPS', 134);
+define('EXTID_FIRSTSTEPS', 135);
 define('PATH_EXT_FIRSTSTEPS', PATH_EXT . '/firststeps');
 
 require_once( PATH_EXT_FIRSTSTEPS . '/config/constants.php' );
