@@ -42,7 +42,7 @@ class TodoyuFirstStepsRenderer {
 			'listClass'	=> $listClass
 		);
 
-		return render($tmpl, $items);
+		return Todoyu::render($tmpl, $items);
 	}
 }
 

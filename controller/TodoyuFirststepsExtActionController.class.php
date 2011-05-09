@@ -30,7 +30,7 @@ class TodoyuFirststepsExtActionController extends TodoyuActionController {
 	 * Initialisation for action controller
 	 */
 	public function init() {
-		restrictAdmin();
+		Todoyu::restrictAdmin();
 	}
 
 

@@ -47,7 +47,7 @@ class TodoyuFirstStepsWizardStepStart extends TodoyuFirstStepsWizardStep {
 		$tmpl	= 'ext/firststeps/view/wizard-step-start.tmpl';
 		$data	= array();
 
-		return render($tmpl, $data);
+		return Todoyu::render($tmpl, $data);
 	}
 
 }
