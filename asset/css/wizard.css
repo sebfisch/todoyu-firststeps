@@ -28,8 +28,6 @@
 .wizardFirststeps ul.list li {
 	padding:5px;
 	margin-bottom:2px;
-	border:1px dashed #CCC;
-	background-color:#FFF;
 }
 
 .wizardFirststeps ul.list li .remove {
@@ -40,4 +38,10 @@
 	height:16px;
 	background:url(../../../../core/asset/img/icons.png) no-repeat 0 -358px;
 	cursor:pointer;
+}
+
+fieldset {
+
+	padding:0;
+	border: 0px;
 }
