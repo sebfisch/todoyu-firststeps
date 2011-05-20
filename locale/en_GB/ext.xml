@@ -14,8 +14,8 @@
 	<label index="wizard.activities.info">Activities define the kind of work you assign to your team.</label>
 	<label index="wizard.activities.help">Activities can be consulting, programming, support, internal work...</label>
 	<label index="wizard.userroles.title">User Groups</label>
-	<label index="wizard.userroles.info">The user groups are used for administration purposes. You can define the different rights per group.</label>
-	<label index="wizard.userroles.help">Quite often the user groups are bound to the job types you previously entered. But it is up to you to define as many groups as you want. In the administration section you then can change the rights for each group.</label>
+	<label index="wizard.userroles.info">The user groups are used for administration purposes.You can assign rights to your user groups in the administration section later </label>
+	<label index="wizard.userroles.help">Quite often the user groups are bound to the job types you previously entered. But it is up to you to define as many groups as you want.</label>
 	<label index="wizard.company.title">Your Company</label>
 	<label index="wizard.company.info">Please enter the basic information of your company. You can change that any times in the contacts section.</label>
 	<label index="wizard.company.help"><![CDATA[&nbsp;]]></label>
@@ -32,4 +32,7 @@
 	<label index="wizard.finish.info"><![CDATA[You now have <strong>successfully</strong> entered all the necessary information to work with todoyu smoothly.<br /><br /> Enjoy it!]]></label>
 	<label index="wizard.finish.help"><![CDATA[&nbsp;]]></label>
 	<label index="wizard.finish.closeWizard">Close wizard</label>
+	<label index="employee.addCompany">Add company</label>
+	<label index="employee.addEmployee">Add employee</label>
+	<label index="employee.addPerson">Add person to project</label>
 </labels>

@@ -80,7 +80,7 @@
 
 				<field type="saveButton" name="addperson">
 					<onclick>Todoyu.Ext.firststeps.Wizard.addPerson()</onclick>
-					<text>Add person to project</text>
+					<text>firststeps.ext.employee.addPerson</text>
 				</field>
 
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <labels>
 	<label index="general">General Settings</label>
-	<label index="general.use">Use/see First Steps module functionality</label>
-	<label index="general.area">Access First Steps Area</label>
+	<label index="general.use">Use/See First Steps module functionality</label>
 </labels>

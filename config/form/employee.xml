@@ -91,7 +91,7 @@
 			<elements>
 				<field type="saveButton" name="save">
 					<onclick>Todoyu.Ext.firststeps.Wizard.addEmployee()</onclick>
-					<text>Add this user to employee list</text>
+					<text>firststeps.ext.employee.addEmployee</text>
 				</field>
 			</elements>
 		</fieldset>
