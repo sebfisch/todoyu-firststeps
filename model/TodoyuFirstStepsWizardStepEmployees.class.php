@@ -116,8 +116,7 @@ class TodoyuFirstStepsWizardStepEmployees extends TodoyuFirstStepsWizardStep {
 
 
 	/**
-	 * Create new employee (person) record
-	 * Add it the the internal company
+	 * Create new employee (person) record and add it the the internal company
 	 *
 	 * @param	Array	$submittedData
 	 * @return	Integer
@@ -137,7 +136,6 @@ class TodoyuFirstStepsWizardStepEmployees extends TodoyuFirstStepsWizardStep {
 		);
 
 		$idPerson	= TodoyuRecordManager::addRecord($this->table, $data);
-
 
 		$companyIDs	= TodoyuContactCompanyManager::getInternalCompanyIDs();
 		$idCompany	= intval($companyIDs[0]);
