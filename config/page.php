@@ -18,9 +18,11 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-if( TodoyuAuth::isAdmin() && TodoyuFirstStepsManager::isNotDisabled() ) {
-	TodoyuFirstStepsManager::addFirstStepsWizard();
+/**
+ * Automatically open wizard if not disabled
+ */
+if( TodoyuFirstStepsManager::isNotDisabled() ) {
+	TodoyuFirstStepsManager::addJsToOpenWizardOnLoad();
 }
-
 
 ?>

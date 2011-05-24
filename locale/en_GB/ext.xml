@@ -4,6 +4,9 @@
 	<label index="wizard.start.title">Your first steps in todoyu</label>
 	<label index="wizard.start.info"><![CDATA[This wizard guides you through the first steps in todoyu. The whole procedure will take only <strong>a few minutes</strong> of your valuable time. Afterwards you will have a ready to work installation. <br /><br />Please press the "continue" button to start.]]></label>
 	<label index="wizard.start.help"><![CDATA[&nbsp;]]></label>
+	<label index="wizard.start.dontUseWizard">I don't want to use the wizard. Don't show this popup again</label>
+	<label index="wizard.start.disableAssistant">Disable Assistant</label>
+	<label index="wizard.start.reactivateInAdmin">You can re-enable this wizard in the admin section</label>
 	<label index="wizard.jobtypes.title">Job Types</label>
 	<label index="wizard.jobtypes.info">Please enter job types you usually use in your company and projects. You can change them any time in the administration section</label>
 	<label index="wizard.jobtypes.help"><![CDATA[ Job types could be:<br />CEO, CFO, manager, team leader, secretary, sales ]]></label>
@@ -35,4 +38,6 @@
 	<label index="employee.addCompany">Add company</label>
 	<label index="employee.addEmployee">Add employee</label>
 	<label index="employee.addPerson">Add person to project</label>
+	<label index="extconf.disableWizard">Don't show the wizard</label>
+	<label index="wizardDisabledInfo">Wizard is disabled now</label>
 </labels>

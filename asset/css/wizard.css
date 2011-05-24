@@ -40,7 +40,17 @@
 	cursor:pointer;
 }
 
-.wizard fieldset {
+
+
+.wizardFirststeps fieldset {
 	padding:0;
 	border:0;
+}
+
+.wizardFirststeps .disableWizard .icon {
+	background:url(../../../../core/asset/img/icons.png) no-repeat 0 -1463px;
+}
+
+.wizardFirststeps .closeWizard .icon {
+	background:url(../../../../core/asset/img/icons.png) no-repeat 0 -357px;
 }

@@ -57,6 +57,39 @@ class TodoyuFirstStepsManager {
 		}
 	}
 
+
+	public static function isNotDisabled() {
+		$extConf	= TodoyuSysmanagerExtConfManager::getExtConf('firststeps');
+		$disabled	= intval($extConf['disableWizard']) === 1;
+
+		return $disabled === false;
+	}
+
+
+	public static function addJsToOpenWizardOnLoad() {
+		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.firststeps.openWizard', 100, true);
+	}
+
+
+	public static function addFirstStepsWizard() {
+		TodoyuWizardManager::addWizard('firststeps', 'TodoyuFirstStepsWizard');
+
+		require_once( PATH_EXT_FIRSTSTEPS . '/config/wizard-steps.php' );
+
+		foreach(Todoyu::$CONFIG['EXT']['firststeps']['wizardsteps'] as $wizardStep) {
+			TodoyuWizardManager::addStep('firststeps', $wizardStep);
+		}
+	}
+
+
+	public static function disableWizard() {
+		$update	= 	array(
+			'disableWizard'	=> 1
+		);
+
+		TodoyuSysmanagerExtConfManager::updateExtConf('firststeps', $update);
+	}
+
 }
 
 ?>

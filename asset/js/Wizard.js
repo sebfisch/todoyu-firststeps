@@ -22,12 +22,23 @@
  */
 Todoyu.Ext.firststeps.Wizard = {
 
+	wizard: null,
+
 
 	/**
 	 * Open first steps wizard
 	 */
 	open: function() {
 		Todoyu.Wizard.open('firststeps', this.onLoaded.bind(this));
+	},
+
+
+
+	/**
+	 * Close wizard without confirmation
+	 */
+	close: function() {
+		Todoyu.Wizard.close(true);
 	},
 
 
@@ -52,7 +63,6 @@ Todoyu.Ext.firststeps.Wizard = {
 				break;
 
 			case 'employees':
-//				this.markLatestItem();
 				this.initEmployees();
 				break;
 
@@ -65,17 +75,6 @@ Todoyu.Ext.firststeps.Wizard = {
 				break;
 		}
 	},
-
-
-//	markLatestItem: function() {
-//		var idLatestItem = $('wizard-form').down('ul.list').select('li').collect(function(item){
-//			return parseInt(item.id.split('-').last(), 10);
-//		}).max();
-//
-//		$('item-' + idLatestItem).setStyle({
-//			backgroundColor: '#FF0'
-//		});
-//	},
 
 
 

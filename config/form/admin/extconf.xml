@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<attributes>
+		<attribute name="name">config</attribute>
+	</attributes>
+	<fieldsets>
+
+		<fieldset name="taskDefaults">
+			<elements>
+
+				<field type="checkbox" name="disableWizard">
+					<label>firststeps.ext.extconf.disableWizard</label>
+				</field>
+
+			</elements>
+		</fieldset>
+	</fieldsets>
+</form>

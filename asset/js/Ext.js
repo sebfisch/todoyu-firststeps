@@ -17,13 +17,50 @@
  * This copyright notice MUST APPEAR in all copies of the script.
  *****************************************************************************/
 
+/**
+ * @module	Firststeps
+ */
+
+/**
+ * Main firststeps object
+ *
+ * @class		firststeps
+ * @namespace	Todoyu.Ext
+ */
 Todoyu.Ext.firststeps = {
 
+	/**
+	 * Initialize extension
+	 */
 	init: function() {
-		//this.Wizard.open();
-		if( Todoyu.isLoggedIn() ) {
-			this.addDemoButton();
-		}
+
+	},
+
+
+	/**
+	 * Open wizard
+	 *
+	 */
+	openWizard: function() {
+		this.Wizard.open();
+	},
+
+
+	disableWizardAndClose: function() {
+		this.disableWizard();
+		this.Wizard.close();
+	},
+
+
+	disableWizard: function() {
+		var url		= Todoyu.getUrl('firststeps', 'ext');
+		var options	= {
+			parameters: {
+				action: 'saveDisable'
+			}
+		};
+
+		Todoyu.send(url, options);
 	},
 
 

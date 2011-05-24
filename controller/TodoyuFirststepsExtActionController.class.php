@@ -48,12 +48,25 @@ class TodoyuFirststepsExtActionController extends TodoyuActionController {
 	}
 
 
+
+	/**
+	 * Remove a company
+	 *
+	 * @param	Array	$params
+	 */
 	public function removeCompanyAction(array $params) {
 		$idCompany	= intval($params['company']);
 
 		TodoyuContactCompanyManager::deleteCompany($idCompany);
 	}
 
+
+
+	/**
+	 * Remove an assigned person from a project
+	 *
+	 * @param	Array	$params
+	 */
 	public function removeAssignedPersonAction(array $params) {
 		$idPerson	= intval($params['person']);
 		$idProject	= intval($params['project']);
@@ -61,6 +74,19 @@ class TodoyuFirststepsExtActionController extends TodoyuActionController {
 		TodoyuProjectProjectManager::removeProjectPerson($idProject, $idPerson);
 	}
 
+
+
+	/**
+	 * Disable the wizard. Save in extConf
+	 *
+	 * @param	Array	$params
+
+	 */
+	public function saveDisableAction(array $params) {
+		TodoyuFirstStepsManager::disableWizard();
+
+		TodoyuNotification::notifyInfo('firststeps.ext.wizardDisabledInfo');
+	}
 
 }
 

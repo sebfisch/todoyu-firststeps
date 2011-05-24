@@ -31,6 +31,8 @@ class TodoyuFirstStepsWizard extends TodoyuWizard {
 	 */
 	public function __construct() {
 		parent::__construct('firststeps');
+
+		Todoyu::restrictAdmin();
 	}
 
 
