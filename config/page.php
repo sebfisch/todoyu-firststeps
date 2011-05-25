@@ -21,7 +21,7 @@
 /**
  * Automatically open wizard if not disabled
  */
-if( TodoyuFirstStepsManager::isNotDisabled() ) {
+if( TodoyuAuth::isAdmin() && TodoyuFirstStepsManager::isNotDisabled() ) {
 	TodoyuFirstStepsManager::addJsToOpenWizardOnLoad();
 }
 
