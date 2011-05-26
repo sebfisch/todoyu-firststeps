@@ -6,7 +6,7 @@
 	<label index="wizard.start.help"><![CDATA[&nbsp;]]></label>
 	<label index="wizard.start.dontUseWizard">Ich möchte den Assistenten nicht benutzen. Dieses Fenster nicht mehr anzeigen.</label>
 	<label index="wizard.start.disableAssistant">Assistant deaktivieren</label>
-	<label index="wizard.start.reactivateInAdmin">Kann im Admin wieder aktiviert werden</label>
+	<label index="wizard.start.reactivateInAdmin">Kann bei der Extension Konfiguration wieder aktiviert werden.</label>
 	<label index="wizard.jobtypes.title">Stellenbezeichnungen</label>
 	<label index="wizard.jobtypes.info">Bitte geben Sie Ihre Stellenbezeichnungen ein, welche Sie in Ihrer Firma und Projekten verwenden. Sie können diese jederzeit im Administrationbereich ändern.</label>
 	<label index="wizard.jobtypes.help"><![CDATA[ Stellenbezeichnungen können sein:<br />CEO, CFO, Managerin, Team Leiter, Sekretärin, Verkäufer ]]></label>
@@ -38,5 +38,6 @@
 	<label index="employee.addCompany">Zu Firmen hinzufügen</label>
 	<label index="employee.addEmployee">Zu Mitarbeiter hinzufügen</label>
 	<label index="employee.addPerson">Person dem Projekt hinzufügen</label>
+	<label index="extconf.disableWizard">Assistent nicht anzeigen.</label>
 	<label index="wizardDisabledInfo">Assistent wurde deaktiviert</label>
 </labels>

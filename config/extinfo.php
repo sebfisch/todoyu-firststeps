@@ -23,7 +23,7 @@
  */
 
 Todoyu::$CONFIG['EXT']['firststeps']['info'] = array(
-	'title'			=> 'Firststeps',
+	'title'			=> 'First Steps',
 	'description' 	=> 'Wizard for first steps in todoyu',
 	'author' 		=> array(
 		'name'		=> 'todoyu Core Developer Team',
