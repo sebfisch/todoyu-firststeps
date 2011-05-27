@@ -40,18 +40,27 @@ Todoyu.Ext.firststeps = {
 	/**
 	 * Open wizard
 	 *
+	 * @method	openWizard
 	 */
 	openWizard: function() {
 		this.Wizard.open();
 	},
 
 
+
+	/**
+	 * @method	disableWizardAndClose
+	 */
 	disableWizardAndClose: function() {
 		this.disableWizard();
 		this.Wizard.close();
 	},
 
 
+
+	/**
+	 * @method	disableWizard
+	 */
 	disableWizard: function() {
 		var url		= Todoyu.getUrl('firststeps', 'ext');
 		var options	= {
@@ -67,6 +76,8 @@ Todoyu.Ext.firststeps = {
 
 	/**
 	 * Add demo button for testing
+	 *
+	 * @method	addDemoButton
 	 */
 	addDemoButton: function() {
 		var button	= new Element('div',{

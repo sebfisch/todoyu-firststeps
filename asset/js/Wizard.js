@@ -27,6 +27,8 @@ Todoyu.Ext.firststeps.Wizard = {
 
 	/**
 	 * Open first steps wizard
+	 *
+	 * @method	open
 	 */
 	open: function() {
 		Todoyu.Wizard.open('firststeps', this.onLoaded.bind(this));
@@ -36,6 +38,8 @@ Todoyu.Ext.firststeps.Wizard = {
 
 	/**
 	 * Close wizard without confirmation
+	 *
+	 * @method	close
 	 */
 	close: function() {
 		Todoyu.Wizard.close(true);
@@ -47,6 +51,7 @@ Todoyu.Ext.firststeps.Wizard = {
 	 * Handler when wizard was loaded
 	 * Initialize event handlers
 	 *
+	 * @method	onLoaded
 	 * @param	{String}		wizardName
 	 * @param	{Ajax.Response}	response
 	 */
@@ -81,6 +86,7 @@ Todoyu.Ext.firststeps.Wizard = {
 	/**
 	 * Initialize auto extending list
 	 *
+	 * @method	initAutoExtendingList
 	 * @param	{String}	listClass
 	 */
 	initAutoExtendingList: function(listClass) {
@@ -94,6 +100,7 @@ Todoyu.Ext.firststeps.Wizard = {
 	/**
 	 * Initialize remove buttons. Add callback
 	 *
+	 * @method	initRemoveButtons
 	 * @param	{Function}	callback
 	 */
 	initRemoveButtons: function(callback) {
@@ -105,7 +112,9 @@ Todoyu.Ext.firststeps.Wizard = {
 
 
 	/**
-	 * Initialize employee setp
+	 * Initialize employee set
+	 *
+	 * @method	initEmployees
 	 */
 	initEmployees: function() {
 		Todoyu.Wizard.setNoSave(true);
@@ -117,6 +126,8 @@ Todoyu.Ext.firststeps.Wizard = {
 
 	/**
 	 * Add new employee
+	 *
+	 * @method	addEmployee
 	 */
 	addEmployee: function() {
 		Todoyu.Wizard.setNoSave(false);
@@ -128,6 +139,7 @@ Todoyu.Ext.firststeps.Wizard = {
 	/**
 	 * Remove an employee
 	 *
+	 * @method	removeEmployee
 	 * @param	{Event}		event
 	 * @param	{Element}	element
 	 */
@@ -159,6 +171,8 @@ Todoyu.Ext.firststeps.Wizard = {
 
 	/**
 	 * Initialize customer step
+	 *
+	 * @method	initCustomers
 	 */
 	initCustomers: function() {
 		Todoyu.Wizard.setNoSave(true);
@@ -170,6 +184,7 @@ Todoyu.Ext.firststeps.Wizard = {
 	/**
 	 * Remove a customer
 	 *
+	 * @method	removeCustomer
 	 * @param	{Event}		event
 	 * @param	{Element}	element
 	 */
@@ -201,6 +216,8 @@ Todoyu.Ext.firststeps.Wizard = {
 
 	/**
 	 * Initialize project step
+	 *
+	 * @method	initProject
 	 */
 	initProject: function() {
 		this.initRemoveButtons(this.removeAssignedPerson.bind(this));
@@ -210,6 +227,8 @@ Todoyu.Ext.firststeps.Wizard = {
 
 	/**
 	 * Add a person to the project
+	 * 
+	 * @method	addPerson
 	 */
 	addPerson: function() {
 		Todoyu.Wizard.submit('', this.onPersonAdded.bind(this));
@@ -220,6 +239,7 @@ Todoyu.Ext.firststeps.Wizard = {
 	/**
 	 * Handler when person was added
 	 *
+	 * @method	onPersonAdded
 	 * @param	{Ajax.Response}	response
 	 */
 	onPersonAdded: function(response) {
@@ -232,6 +252,7 @@ Todoyu.Ext.firststeps.Wizard = {
 	/**
 	 * Remove assigned person from project
 	 *
+	 * @method	removeAssignedPerson
 	 * @param	{Event}		event
 	 * @param	{Element}	element
 	 */
