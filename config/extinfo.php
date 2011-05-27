@@ -36,7 +36,8 @@ Todoyu::$CONFIG['EXT']['firststeps']['info'] = array(
 		'depends' 	=> array(),
 		'conflicts' => array(),
 		'system'	=> false
-	)
+	),
+	'urlDocumentation'	=> 'http://doc.todoyu.com/?firststeps'
 );
 
 ?>
