@@ -154,6 +154,7 @@ class TodoyuFirstStepsWizardStepProject extends TodoyuFirstStepsWizardStep {
 	 */
 	private function saveProject(array $submittedData) {
 		$data	= array(
+			'status'		=> STATUS_PLANNING,
 			'title'			=> $submittedData['title'],
 			'description'	=> $submittedData['description'],
 			'id_company'	=> intval($submittedData['id_company']),
