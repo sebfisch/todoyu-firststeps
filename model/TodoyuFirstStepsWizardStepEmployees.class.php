@@ -130,7 +130,7 @@ class TodoyuFirstStepsWizardStepEmployees extends TodoyuFirstStepsWizardStep {
 			'username'		=> $submittedData['username'],
 			'password'		=> md5($submittedData['password']),
 			'is_admin'		=> 0,
-			'active'		=> 1,
+			'is_active'		=> 1,
 			'shortname'		=> strtoupper(substr($submittedData['firstname'], 0, 2) . substr($submittedData['lastname'], 0, 2)),
 			'birthday'		=> '0000-00-00'
 		);
