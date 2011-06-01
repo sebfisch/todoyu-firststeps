@@ -36,11 +36,6 @@ class TodoyuFirstStepsViewHelper {
 		$loginPersons	= TodoyuContactPersonManager::getAllLoginPersons();
 		$options		= array();
 
-		$options[] = array(
-			'value'	=> 0,
-			'label'	=> ''
-		);
-
 		foreach($loginPersons as $loginPerson) {
 			$options[] = array(
 				'value'	=> $loginPerson['id'],
