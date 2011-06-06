@@ -11,9 +11,9 @@
 				<field type="text" name="title">
 					<label>core.global.title</label>
 					<validate>
-						<isNotEmpty msg="LLL:project.ext.form.validation.title"/>
+						<isNotEmpty msg="LLL:project.ext.form.validation.title" />
 					</validate>
-					<required/>
+					<required />
 				</field>
 
 				<field type="RTE" name="description">
@@ -22,7 +22,7 @@
 						<theme>simple</theme>
 						<width>100%</width>
 					</tinymce>
-					<required/>
+					<required />
 				</field>
 
 				<field type="textAC" name="id_company">
