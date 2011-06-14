@@ -27,7 +27,7 @@
 class TodoyuFirstStepsRenderer {
 
 	/**
-	 * Render items with the itemlist template
+	 * Render items with the item list template
 	 *
 	 * @param	Array	$items
 	 * @param	String	$fieldName

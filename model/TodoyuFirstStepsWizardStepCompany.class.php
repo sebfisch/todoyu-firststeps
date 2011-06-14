@@ -110,7 +110,7 @@ class TodoyuFirstStepsWizardStepCompany extends TodoyuFirstStepsWizardStep {
 	/**
 	 * Save/update company
 	 *
-	 * @param 	Array	$submittedData
+	 * @param	Array	$submittedData
 	 */
 	private function saveCompany(array $submittedData) {
 		$data	= array(

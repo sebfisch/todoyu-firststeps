@@ -58,6 +58,7 @@ class TodoyuFirstStepsWizardStepProject extends TodoyuFirstStepsWizardStep {
 	}
 
 
+
 	/**
 	 * Render content
 	 *

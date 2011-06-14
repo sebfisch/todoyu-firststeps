@@ -34,6 +34,7 @@ class TodoyuFirstStepsWizardStepProjectroles extends TodoyuFirstStepsWizardStep 
 	}
 
 
+
 	/**
 	 * Save project roles
 	 *
@@ -54,7 +55,7 @@ class TodoyuFirstStepsWizardStepProjectroles extends TodoyuFirstStepsWizardStep 
 
 
 	/**
-	 * Render content
+	 * Render content (project role items list)
 	 *
 	 * @return	String
 	 */

@@ -58,6 +58,12 @@ class TodoyuFirstStepsManager {
 	}
 
 
+
+	/**
+	 * Check whether the first steps wizard is enabled
+	 *
+	 * @return	Boolean
+	 */
 	public static function isNotDisabled() {
 		$extConf	= TodoyuSysmanagerExtConfManager::getExtConf('firststeps');
 		$disabled	= intval($extConf['disableWizard']) === 1;
@@ -66,11 +72,19 @@ class TodoyuFirstStepsManager {
 	}
 
 
+
+	/**
+	 * Add JavaScript onload-function for opening first steps wizard
+	 */
 	public static function addJsToOpenWizardOnLoad() {
 		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.firststeps.openWizard', 100, true);
 	}
 
 
+
+	/**
+	 * Register first steps wizard in TodoyuWizardManager
+	 */
 	public static function addFirstStepsWizard() {
 		TodoyuWizardManager::addWizard('firststeps', 'TodoyuFirstStepsWizard');
 
@@ -82,6 +96,10 @@ class TodoyuFirstStepsManager {
 	}
 
 
+
+	/**
+	 * Set first steps wizard disabled
+	 */
 	public static function disableWizard() {
 		$update	= 	array(
 			'disableWizard'	=> 1

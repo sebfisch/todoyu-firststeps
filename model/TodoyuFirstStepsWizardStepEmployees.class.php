@@ -37,8 +37,7 @@ class TodoyuFirstStepsWizardStepEmployees extends TodoyuFirstStepsWizardStep {
 
 
 	/**
-	 * Save employee
-	 * Add new record
+	 * Save employee (add new record)
 	 *
 	 * @param	Array	$data
 	 * @return	Boolean

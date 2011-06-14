@@ -27,7 +27,7 @@
 class TodoyuFirstStepsViewHelper {
 
 	/**
-	 * Get options for person form element
+	 * Get options array for person form element
 	 *
 	 * @param	TodoyuFormElement		$field
 	 * @return	Array

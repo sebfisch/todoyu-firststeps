@@ -19,7 +19,7 @@
 *****************************************************************************/
 
 /**
- * [Enter Class Description]
+ * Wizard step: user roles
  *
  * @package		Todoyu
  * @subpackage	Firststeps
@@ -51,6 +51,7 @@ class TodoyuFirstStepsWizardStepUserroles extends TodoyuFirstStepsWizardStep {
 
 		return true;
 	}
+
 
 
 	/**
