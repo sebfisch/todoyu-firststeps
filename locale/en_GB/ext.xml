@@ -38,6 +38,6 @@
 	<label index="employee.addCompany">Add company</label>
 	<label index="employee.addEmployee">Add employee</label>
 	<label index="employee.addPerson">Add person to project</label>
-	<label index="extconf.disableWizard">Don't show the wizard</label>
+	<label index="extconf.disableWizard">Deactivate the wizard</label>
 	<label index="wizardDisabledInfo">Wizard is disabled now</label>
 </labels>
