@@ -116,8 +116,9 @@ class TodoyuFirstStepsWizardStepCompany extends TodoyuFirstStepsWizardStep {
 		$data	= array(
 			'title'	=> $submittedData['title']
 		);
+		$idCompany	= 1;
 
-		TodoyuRecordManager::updateRecord($this->table, 1, $data);
+		TodoyuContactCompanyManager::updateCompany($idCompany, $data);
 
 		$addresses	= $this->getCompany()->getAddresses();
 		$mainAddress= TodoyuArray::assure($addresses[0]);
@@ -129,7 +130,12 @@ class TodoyuFirstStepsWizardStepCompany extends TodoyuFirstStepsWizardStep {
 			'city'		=> $submittedData['city']
 		);
 
-		TodoyuContactAddressManager::updateAddress($idAddress, $data);
+		if( $idAddress === 0 ) {
+			$idAddress	= TodoyuContactAddressManager::addAddress($data);
+			TodoyuContactCompanyManager::linkAddresses($idCompany, array($idAddress));
+		} else {
+			TodoyuContactAddressManager::updateAddress($idAddress, $data);
+		}
 	}
 
 }
