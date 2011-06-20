@@ -30,9 +30,10 @@ Todoyu::$CONFIG['EXT']['firststeps']['info'] = array(
 		'email'		=> 'team@todoyu.com',
 		'company'	=> 'snowflake productions GmbH, Zurich'
 	),
-	'state' 		=> 'beta',
-	'version' 		=> '0.5.0',
+	'state' 		=> 'stable',
+	'version' 		=> '1.0.0',
 	'constraints' 	=> array(
+		'core'		=> '2.1.0',
 		'depends' 	=> array(),
 		'conflicts' => array(),
 		'system'	=> false
