@@ -68,7 +68,7 @@
 							<allowEmpty />
 						</goodPassword>
 					</validate>
-					<textAfterField>LLL:contact.ext.person.attr.password.hasPassword</textAfterField>
+					<textAfterField>contact.ext.person.attr.password.hasPassword</textAfterField>
 				</field>
 
 				<field type="text" name="email">
