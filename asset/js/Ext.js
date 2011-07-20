@@ -31,6 +31,8 @@ Todoyu.Ext.firststeps = {
 
 	/**
 	 * Initialize extension
+	 *
+	 * @method	init
 	 */
 	init: function() {
 
