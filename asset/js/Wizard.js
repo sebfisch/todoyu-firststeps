@@ -22,7 +22,12 @@
  */
 Todoyu.Ext.firststeps.Wizard = {
 
+	/**
+	 * @property	Wizard
+	 * @type		{Object}
+	 */
 	wizard: null,
+
 
 
 	/**

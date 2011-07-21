@@ -39,6 +39,7 @@ Todoyu.Ext.firststeps = {
 	},
 
 
+
 	/**
 	 * Open wizard
 	 *
