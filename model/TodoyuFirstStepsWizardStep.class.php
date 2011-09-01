@@ -23,6 +23,7 @@
  *
  * @package		Todoyu
  * @subpackage	Firststeps
+ * @abstract
  */
 abstract class TodoyuFirstStepsWizardStep extends TodoyuWizardStep {
 
