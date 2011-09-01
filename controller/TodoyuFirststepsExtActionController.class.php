@@ -19,10 +19,10 @@
 *****************************************************************************/
 
 /**
- *  Action controller for company
+ *  Action controller for Firststeps
  *
  * @package		Todoyu
- * @subpackage	Contact
+ * @subpackage	Firststeps
  */
 class TodoyuFirststepsExtActionController extends TodoyuActionController {
 

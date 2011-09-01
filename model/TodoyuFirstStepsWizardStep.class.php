@@ -19,7 +19,7 @@
 *****************************************************************************/
 
 /**
- * Wizard step with special fields for firststeps wizard
+ * Wizard step with special fields for Firststeps wizard
  *
  * @package		Todoyu
  * @subpackage	Firststeps
