@@ -17,7 +17,7 @@
 	<label index="wizard.activities.info">Les activités définissent le type de travail que vous assignez à votre équipe.</label>
 	<label index="wizard.activities.help">Les activités peuvent être consulting, programming, support, internal work...</label>
 	<label index="wizard.userroles.title">Groupes d'utilisateurs</label>
-	<label index="wizard.userroles.info">Les groupes d'utilisateurs sont utilisées à des fins d'administration.Vous pouvez attribuer des droits à vos groupes d'utilisateurs dans la section d'administration plus tard </label>
+	<label index="wizard.userroles.info">Les groupes d'utilisateurs sont utilisées à des fins d'administration.Vous pouvez attribuer des droits à vos groupes d'utilisateurs dans la section d'administration plus tard</label>
 	<label index="wizard.userroles.help">Très souvent, les groupes d'utilisateurs sont liés aux types de travail que vous avez précédemment entré. Mais c'est à vous de définir autant de groupes que vous voulez.</label>
 	<label index="wizard.company.title">Votre société</label>
 	<label index="wizard.company.info">Veuillez entrer les informations basiques sur votre société. Vous pouvez changer ceci n'importe quand dans la section des contacts.</label>

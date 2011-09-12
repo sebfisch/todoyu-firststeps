@@ -58,7 +58,7 @@
 				</field>
 
 			</elements>
-		 </fieldset>
+		</fieldset>
 
 		<fieldset name="persons">
 			<legend>Main project data</legend>
@@ -85,7 +85,7 @@
 
 
 			</elements>
-		 </fieldset>
+		</fieldset>
 
 	</fieldsets>
 </form>
