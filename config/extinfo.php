@@ -24,17 +24,17 @@
 
 Todoyu::$CONFIG['EXT']['firststeps']['info'] = array(
 	'title'			=> 'First Steps',
-	'description' 	=> 'Wizard for first steps in todoyu',
-	'author' 		=> array(
+	'description'	=> 'Wizard for first steps in todoyu',
+	'author'		=> array(
 		'name'		=> 'todoyu Core Developer Team',
 		'email'		=> 'team@todoyu.com',
 		'company'	=> 'snowflake productions GmbH, Zurich'
 	),
-	'state' 		=> 'stable',
-	'version' 		=> '1.0.1',
-	'constraints' 	=> array(
+	'state'			=> 'stable',
+	'version'		=> '1.0.1',
+	'constraints'	=> array(
 		'core'		=> '2.1.0',
-		'depends' 	=> array(),
+		'depends'	=> array(),
 		'conflicts' => array(),
 		'system'	=> false
 	),

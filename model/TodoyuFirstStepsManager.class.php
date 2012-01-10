@@ -101,7 +101,7 @@ class TodoyuFirstStepsManager {
 	 * Set first steps wizard disabled
 	 */
 	public static function disableWizard() {
-		$update	= 	array(
+		$update	=	array(
 			'disableWizard'	=> 1
 		);
 
