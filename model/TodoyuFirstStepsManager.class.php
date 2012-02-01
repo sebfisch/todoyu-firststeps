@@ -68,7 +68,7 @@ class TodoyuFirstStepsManager {
 		$extConf	= TodoyuSysmanagerExtConfManager::getExtConf('firststeps');
 		$disabled	= intval($extConf['disableWizard']) === 1;
 
-		return $disabled === false;
+		return !$disabled;
 	}
 
 
