@@ -83,13 +83,14 @@ class TodoyuFirstStepsWizardStepCompany extends TodoyuFirstStepsWizardStep {
 	private function getCompanyData() {
 		$company	= $this->getCompany();
 		$addresses	= $company->getAddresses();
-		$mainAddress= TodoyuArray::assure($addresses[0]);
+		/** @var TodoyuContactAddress $mainAddress */
+		$mainAddress= reset($addresses);
 
 		$data	= $company->getTemplateData();
 
-		$data['street']	= $mainAddress['street'];
-		$data['zip']	= $mainAddress['zip'];
-		$data['city']	= $mainAddress['city'];
+		$data['street']	= $mainAddress->getStreet();
+		$data['zip']	= $mainAddress->getZip();
+		$data['city']	= $mainAddress->getCity();
 
 		return $data;
 	}
@@ -120,20 +121,21 @@ class TodoyuFirstStepsWizardStepCompany extends TodoyuFirstStepsWizardStep {
 
 		TodoyuContactCompanyManager::updateCompany($idCompany, $data);
 
-		$addresses	= $this->getCompany()->getAddresses();
-		$mainAddress= TodoyuArray::assure($addresses[0]);
-		$idAddress	= intval($mainAddress['id']);
-
 		$data	= array(
 			'street'	=> $submittedData['street'],
 			'zip'		=> $submittedData['zip'],
 			'city'		=> $submittedData['city']
 		);
 
-		if( $idAddress === 0 ) {
+		$addresses	= $this->getCompany()->getAddresses();
+
+		if( sizeof($addresses) === 0 ) {
 			$idAddress	= TodoyuContactAddressManager::addAddress($data);
 			TodoyuContactCompanyManager::linkAddresses($idCompany, array($idAddress));
 		} else {
+			/** @var TodoyuContactAddress $firstAddress */
+			$firstAddress	= reset($addresses);
+			$idAddress		= $firstAddress->getID();
 			TodoyuContactAddressManager::updateAddress($idAddress, $data);
 		}
 	}
