@@ -77,7 +77,7 @@ class TodoyuFirstStepsManager {
 	 * Add JavaScript onload-function for opening first steps wizard
 	 */
 	public static function addJsToOpenWizardOnLoad() {
-		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.firststeps.openWizard', 100, true);
+		TodoyuPage::addJsInit('Todoyu.Ext.firststeps.openWizard()', 100);
 	}
 
 
