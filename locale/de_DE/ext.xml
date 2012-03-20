@@ -39,5 +39,5 @@
 	<label index="employee.addEmployee">Zu Mitarbeiter hinzufügen</label>
 	<label index="employee.addPerson">Person dem Projekt hinzufügen</label>
 	<label index="extconf.disableWizard">Assistent deaktivieren</label>
-	<label index="wizardDisabledInfo">Assistent wurde deaktiviert</label>
+	<label index="wizardDisabledInfo">Assistent wurde deaktiviert.</label>
 </labels>
