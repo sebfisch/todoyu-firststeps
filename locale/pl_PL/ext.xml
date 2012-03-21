@@ -15,7 +15,7 @@
 	<label index="wizard.projectroles.help"><![CDATA[ Aby podsunąć Ci pomysł co mogłoby być: W projekcie todoyu mamy nastepujące role:<br />menadżer projektu, deweloper, inżynier front-end, menadżer produktu, odpowiedni za marketing, menadżer społecznościowy, szkoleniowiec ]]></label>
 	<label index="wizard.activities.title">Działania</label>
 	<label index="wizard.activities.info">Działania definiują rodzaje prac, które przypisujesz zespołowi.</label>
-	<label index="wizard.activities.help">Działaniami mogą być kostultacje, programowanie, wsparcie...</label>
+	<label index="wizard.activities.help">Działaniami mogą być kostultacje, programowanie, wsparcie ...</label>
 	<label index="wizard.userroles.title">Grupy użytkowników</label>
 	<label index="wizard.userroles.info">Grupy użytkowników są wykorzystywane do celów administracyjnych. Możesz później przypisać uprawnienia do grup w sekcji administracyjnej.</label>
 	<label index="wizard.userroles.help">Dość często grupy użytkowników są przypisane do rodzajów prac, które podałeś wcześniej, jednak od Ciebie zależy ile grup stworzysz i przydzielisz.</label>

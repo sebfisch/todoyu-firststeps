@@ -15,7 +15,7 @@
 	<label index="wizard.projectroles.help"><![CDATA[ To give you an idea what this could be: In the todoyu team we have the following project roles:<br />project manager, developer, frontend engineer, product manager, marketing responsible, community manager, trainer ]]></label>
 	<label index="wizard.activities.title">Activities</label>
 	<label index="wizard.activities.info">Activities define the kind of work you assign to your team.</label>
-	<label index="wizard.activities.help">Activities can be consulting, programming, support, internal work...</label>
+	<label index="wizard.activities.help">Activities can be consulting, programming, support, internal work ...</label>
 	<label index="wizard.userroles.title">User Groups</label>
 	<label index="wizard.userroles.info">The user groups are used for administration purposes.You can assign rights to your user groups in the administration section later </label>
 	<label index="wizard.userroles.help">Quite often the user groups are bound to the job types you previously entered. But it is up to you to define as many groups as you want.</label>
