@@ -31,11 +31,11 @@ Todoyu::$CONFIG['EXT']['firststeps']['info'] = array(
 		'company'	=> 'snowflake productions GmbH, Zurich'
 	),
 	'state'			=> 'stable',
-	'version'		=> '1.0.2',
+	'version'		=> '1.1.0b',
 	'constraints'	=> array(
-		'core'		=> '2.1.0',
+		'core'		=> '2.2.0b',
 		'depends'	=> array(
-			'contact'	=> '1.2.0dev'
+			'contact'	=> '1.2.0b'
 		)
 	),
 	'urlDocumentation'	=> 'http://doc.todoyu.com/?firststeps'
