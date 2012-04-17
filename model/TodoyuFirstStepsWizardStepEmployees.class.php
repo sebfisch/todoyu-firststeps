@@ -53,7 +53,7 @@ class TodoyuFirstStepsWizardStepEmployees extends TodoyuFirstStepsWizardStep {
 
 			$this->addEmployee($employeeData);
 
-			TodoyuNotification::notifySuccess('Employee was added to the list');
+			TodoyuNotification::notifySuccess('firststeps.ext.wizard.employees.added');
 
 			return true;
 		} else {

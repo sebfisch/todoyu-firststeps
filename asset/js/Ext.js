@@ -73,23 +73,6 @@ Todoyu.Ext.firststeps = {
 		};
 
 		Todoyu.send(url, options);
-	},
-
-
-
-	/**
-	 * Add demo button for testing
-	 *
-	 * @method	addDemoButton
-	 */
-	addDemoButton: function() {
-		var button	= new Element('div',{
-			id: 'firststepswizard-button'
-		}).update('Open FirstSteps Demo Wizard');
-
-		button.on('click', this.Wizard.open.bind(this.Wizard));
-
-		document.body.insert(button);
 	}
 
 };

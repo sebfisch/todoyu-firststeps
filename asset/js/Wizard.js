@@ -152,7 +152,7 @@ Todoyu.Ext.firststeps.Wizard = {
 		var idPerson	= element.id.split('-').last();
 		var name		= element.innerHTML.stripTags();
 
-		if( confirm("Remove employee?\n\n" + name) ) {
+		if( confirm("[LLL:firststeps.ext.wizard.employees.confirmRemove]\n\n" + name) ) {
 			var url		= Todoyu.getUrl('firststeps', 'ext');
 			var options	= {
 				parameters: {
@@ -197,7 +197,7 @@ Todoyu.Ext.firststeps.Wizard = {
 		var idCompany	= element.id.split('-').last();
 		var name		= element.innerHTML.stripTags();
 
-		if( confirm("Remove company?\n\n" + name) ) {
+		if( confirm("[LLL:firststeps.ext.wizard.customers.confirmRemove]\n\n" + name) ) {
 			var url		= Todoyu.getUrl('firststeps', 'ext');
 			var options	= {
 				parameters: {
@@ -265,7 +265,7 @@ Todoyu.Ext.firststeps.Wizard = {
 		var idPerson	= element.id.split('-').last();
 		var name		= element.innerHTML.stripTags();
 
-		if( confirm("Remove assigned person from project?\n\n" + name) ) {
+		if( confirm("[LLL:firststeps.ext.wizard.project.confirmRemovePerson]\n\n" + name) ) {
 			var url		= Todoyu.getUrl('firststeps', 'ext');
 			var options	= {
 				parameters: {
