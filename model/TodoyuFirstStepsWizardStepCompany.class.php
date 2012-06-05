@@ -83,14 +83,16 @@ class TodoyuFirstStepsWizardStepCompany extends TodoyuFirstStepsWizardStep {
 	private function getCompanyData() {
 		$company	= $this->getCompany();
 		$addresses	= $company->getAddresses();
-		/** @var TodoyuContactAddress $mainAddress */
-		$mainAddress= reset($addresses);
-
 		$data	= $company->getTemplateData();
 
-		$data['street']	= $mainAddress->getStreet();
-		$data['zip']	= $mainAddress->getZip();
-		$data['city']	= $mainAddress->getCity();
+		if( sizeof($addresses) > 0 ) {
+			/** @var TodoyuContactAddress $mainAddress */
+			$mainAddress= reset($addresses);
+
+			$data['street']	= $mainAddress->getStreet();
+			$data['zip']	= $mainAddress->getZip();
+			$data['city']	= $mainAddress->getCity();
+		}
 
 		return $data;
 	}
