@@ -42,7 +42,7 @@ Todoyu::$CONFIG['EXT']['firststeps']['assets'] = array(
 			'position'	=> 100
 		),
 		array(
-			'file'		=> 'ext/firststeps/asset/css/wizard.css',
+			'file'		=> 'ext/firststeps/asset/css/wizard.scss',
 			'position'	=> 100
 		)
 	)
