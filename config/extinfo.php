@@ -33,9 +33,9 @@ Todoyu::$CONFIG['EXT']['firststeps']['info'] = array(
 	'state'			=> 'stable',
 	'version'		=> '1.1.1',
 	'constraints'	=> array(
-		'core'		=> '2.2.0',
+		'core'		=> '2.3.0',
 		'depends'	=> array(
-			'contact'	=> '1.2.0'
+			'contact'	=> '1.3.0'
 		)
 	),
 	'urlDocumentation'	=> 'http://doc.todoyu.com/?firststeps'
