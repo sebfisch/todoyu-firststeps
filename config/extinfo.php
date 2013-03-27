@@ -31,7 +31,7 @@ Todoyu::$CONFIG['EXT']['firststeps']['info'] = array(
 		'company'	=> 'snowflake productions GmbH, Zurich'
 	),
 	'state'			=> 'stable',
-	'version'		=> '1.1.1',
+	'version'		=> '1.1.2',
 	'constraints'	=> array(
 		'core'		=> '2.3.0',
 		'depends'	=> array(
