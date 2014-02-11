@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="ext.title">Langkah Pertama</label>
+	<label index="wizard.start.title">Langkah pertama Anda dalam todoyu</label>
+	<label index="wizard.start.info"><![CDATA[Wizard ini akan memandu Anda melalui langkah-langkah pertama dalam todoyu. Seluruh prosedur akan mengambil hanya <strong> beberapa menit </ strong> waktu berharga Anda. Setelah itu Anda akan memiliki siap untuk bekerja instalasi. <br /> <br /> Silakan tekan tombol "lanjutkan" tombol untuk memulai.]]></label>
+	<label index="wizard.start.help"><![CDATA[&nbsp;]]></label>
+	<label index="wizard.start.dontUseWizard">Saya tidak ingin menggunakan wizard. Jangan tampilkan ini lagi popup</label>
+	<label index="wizard.start.disableAssistant">Nonaktifkan Asisten</label>
+	<label index="wizard.start.reactivateInAdmin">Anda dapat mengaktifkan kembali wizard ini di bagian admin</label>
+	<label index="wizard.jobtypes.title">Jenis Pekerjaan</label>
+	<label index="wizard.jobtypes.info">Masukkan jenis pekerjaan yang biasanya Anda gunakan dalam perusahaan Anda dan proyek. Anda dapat mengubahnya setiap saat dalam bagian administrasi</label>
+	<label index="wizard.jobtypes.help"><![CDATA[ Jenis pekerjaan bisa jadi: <br /> CEO, CFO, manajer, pemimpin tim, sekretaris, penjualan ]]></label>
+	<label index="wizard.projectroles.title">Peran proyek</label>
+	<label index="wizard.projectroles.info">Silahkan mengisi peran proyek biasanya Anda dalam proyek Anda.</label>
+	<label index="wizard.projectroles.help"><![CDATA[ Untuk memberikan gambaran apa ini bisa menjadi: Di tim todoyu kita memiliki peran proyek berikut: <br /> manajer proyek, pengembang, insinyur frontend, manajer produk, pemasaran yang bertanggung jawab, manajer komunitas, pelatih ]]></label>
+	<label index="wizard.activities.title">Aktivitas</label>
+	<label index="wizard.activities.info">Kegiatan menentukan jenis pekerjaan yang Anda tetapkan untuk tim Anda.</label>
+	<label index="wizard.activities.help">Kegiatan dapat konsultasi, pemrograman, dukungan, kerja internal ...</label>
+	<label index="wizard.userroles.title">Kelompok Pengguna</label>
+	<label index="wizard.userroles.info">Kelompok pengguna yang digunakan untuk keperluan administrasi. Anda dapat menetapkan hak kelompok pengguna Anda di bagian administrasi kemudian</label>
+	<label index="wizard.userroles.help">Cukup sering kelompok pengguna terikat pada jenis pekerjaan yang sebelumnya Anda masukkan. Tapi itu terserah Anda untuk menentukan sebagai banyak kelompok yang Anda inginkan.</label>
+	<label index="wizard.company.title">Perusahaan Anda</label>
+	<label index="wizard.company.info">Masukkan informasi dasar perusahaan Anda. Anda dapat mengubah bahwa setiap kali di bagian kontak.</label>
+	<label index="wizard.company.help"><![CDATA[&nbsp;]]></label>
+	<label index="wizard.employees.title">Karyawan</label>
+	<label index="wizard.employees.info">Sekarang katakan todoyu yang anggota tim Anda. Tentukan informasi pribadi dasar - pengguna dapat mengubah data mereka setiap saat dalam profil mereka.</label>
+	<label index="wizard.employees.help"><![CDATA[&nbsp;]]></label>
+	<label index="wizard.employees.confirmRemove">Hapus karyawan</label>
+	<label index="wizard.employees.added">Karyawan telah ditambahkan ke dalam daftar</label>
+	<label index="wizard.customers.title">Pelanggan</label>
+	<label index="wizard.customers.info">Mudah-mudahan Anda sudah memiliki beberapa pelanggan pada saat ini. Besar! Masukkan informasi dasar.</label>
+	<label index="wizard.customers.help"><![CDATA[&nbsp;]]></label>
+	<label index="wizard.customers.confirmRemove">Hapus Pelanggan?</label>
+	<label index="wizard.project.title">Proyek Pertama</label>
+	<label index="wizard.project.info">Akhirnya, mulai dengan proyek pertama di todoyu. Selamat!</label>
+	<label index="wizard.project.help"><![CDATA[&nbsp;]]></label>
+	<label index="wizard.project.confirmRemovePerson">Hapus ditugaskan orang dari proyek?</label>
+	<label index="wizard.finish.title">Itu saja!</label>
+	<label index="wizard.finish.info"><![CDATA[Anda sekarang telah <strong> berhasil </ strong> memasukkan semua informasi yang diperlukan untuk bekerja dengan todoyu lancar. <br /> <br /> Enjoy it!]]></label>
+	<label index="wizard.finish.help"><![CDATA[&nbsp;]]></label>
+	<label index="wizard.finish.closeWizard">Tutup wizard</label>
+	<label index="employee.addCompany">Tambah Peusahaan</label>
+	<label index="employee.addEmployee">Tambah Karyawan</label>
+	<label index="employee.addPerson">Tambah Orang ke Proyek</label>
+	<label index="extconf.disableWizard">Nonaktifkan wizard</label>
+	<label index="wizardDisabledInfo">Wizard sekarang dinonaktifkan</label>
+</labels>
